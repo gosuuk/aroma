@@ -147,8 +147,8 @@ const aromaTree: AromaNode = {
             B: {
               id: 'performance-a-b-redirect',
               question: '아로마 오일이 당신의 운동에 어떤 도움이 되길 원하나요?',
-              optionA: '운동 전 워밍 효과를 주고, 땀 배출과 순환 도움',
-              optionB: '호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움',
+              optionA: '"운동 전 워밍 효과를 주고, 땀 배출과 순환 도움"',
+              optionB: '"호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움"',
               children: {
                 A: {
                   id: 'performance-a-b-a-q5',
@@ -203,21 +203,21 @@ const aromaTree: AromaNode = {
         B: {
           id: 'body-performance-q3',
           question: '"오늘 운동을 방해하는 가장 큰 요인은?"',
-          optionA: '몸이 붓고 근육이 뭉쳐서 둔해요',
-          optionB: '머리가 띵하고 숨쉬기가 답답해요',
+          optionA: '"몸이 붓고 근육이 뭉쳐서 둔해요"',
+          optionB: '"머리가 띵하고 숨쉬기가 답답해요"',
           children: {
             A: {
               id: 'body-performance-swelling-q4',
               question: '"어떤 도움이 가장 필요한가요?"',
-              optionA: '운동 전 워밍업 효과로 순환 도움',
-              optionB: '긴장 완화와 스트레칭',
+              optionA: '"운동 전 워밍업 효과로 순환 도움"',
+              optionB: '"긴장 완화와 스트레칭"',
               children: {
                 A: {
                   id: 'body-performance-swelling-warming-q5',
                   question: '당신을 위한 최고의 운동 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '"뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]"',
+                  optionB: '"답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]"',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-5',
@@ -239,8 +239,8 @@ const aromaTree: AromaNode = {
                   id: 'body-performance-swelling-relax-q5',
                   question: '당신을 위한 최고의 운동 파트너는?',
                   isQuestion5: true,
-                  optionA: '복잡한 머리를 식히고 자유를 주눈 [브리쓰 브리즈]',
-                  optionB: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '"복잡한 머리를 식히고 자유를 주눈 [브리쓰 브리즈]"',
+                  optionB: '"지친 마음을 위로하고 사랑을 채우는 [질 바이브]"',
                   children: {
                     A: {
                       id: 'result-breathe-breeze-6',
@@ -583,9 +583,9 @@ function App() {
       return {
         logoText: 'Dunamu',
         logoImage: dunamuLogo,
-        welcomeTitle: '한국알콜그룹 임직원들을 위한',
+        welcomeTitle: '두니들을 위한',
         welcomeSubtitle: '웰니스 아로마 테스트',
-        questionTitle: '한국알콜그룹 임직원들을 위한 웰니스 아로마 테스트'
+        questionTitle: '두니들을 위한 웰니스 아로마 테스트'
       }
     } else {
       // /alcohol, /kai, 또는 기본 경로
@@ -884,7 +884,7 @@ function App() {
         <div className="question-screen">
           <div className="question-header">
             <div className="logo-small">
-              <div className="logo-small-text">한국알콜산업 KAI</div>
+              <img src={brandConfig.logoImage} alt={brandConfig.logoText} className="logo-small-image" />
             </div>
           </div>
 
@@ -909,14 +909,28 @@ function App() {
                 className={`option-button option-a ${isQuestion5 ? 'option-q5' : ''}`}
                 onClick={() => handleChoice('A')}
               >
-                <span className="option-text">{currentNode.optionA}</span>
+                <span className="option-text">
+                  {currentNode.optionA?.includes('[') ? (
+                    <>
+                      {currentNode.optionA.split('[')[0]}<br />
+                      <span className="product-highlight">[{currentNode.optionA.split('[')[1]}</span>
+                    </>
+                  ) : currentNode.optionA}
+                </span>
               </button>
 
               <button 
                 className={`option-button option-b ${isQuestion5 ? 'option-q5' : ''}`}
                 onClick={() => handleChoice('B')}
               >
-                <span className="option-text">{currentNode.optionB}</span>
+                <span className="option-text">
+                  {currentNode.optionB?.includes('[') ? (
+                    <>
+                      {currentNode.optionB.split('[')[0]}<br />
+                      <span className="product-highlight">[{currentNode.optionB.split('[')[1]}</span>
+                    </>
+                  ) : currentNode.optionB}
+                </span>
               </button>
             </div>
 
