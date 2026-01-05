@@ -1,10 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 // 로고 이미지
 import kaiLogo from './assets/한국알콜산업 로고.svg'
 import dunamuLogo from './assets/두나무 로고.svg'
+
+// 오디오 파일
+import bgm1 from './assets/1.mp3'
+import bgm2 from './assets/2.mp3'
 
 // 제품 이미지
 import perfectShapingDetailImg from './assets/Group 101.png'
@@ -567,6 +571,7 @@ interface BrandConfig {
   welcomeTitle: string
   welcomeSubtitle: string
   questionTitle: string
+  bgm: any
 }
 
 function App() {
@@ -575,6 +580,8 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(true)
   const [path, setPath] = useState<string[]>([])
   const [showResultPage1, setShowResultPage1] = useState(true)
+  const [isMuted, setIsMuted] = useState(false)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
 
   // 경로에 따라 브랜드 설정
   const getBrandConfig = (): BrandConfig => {
@@ -585,7 +592,8 @@ function App() {
         logoImage: dunamuLogo,
         welcomeTitle: '두니들을 위한',
         welcomeSubtitle: '웰니스 아로마 테스트',
-        questionTitle: '두니들을 위한 웰니스 아로마 테스트'
+        questionTitle: '두니들을 위한 웰니스 아로마 테스트',
+        bgm: bgm2
       }
     } else {
       // /alcohol, /kai, 또는 기본 경로
@@ -594,12 +602,69 @@ function App() {
         logoImage: kaiLogo,
         welcomeTitle: '한국알콜그룹 임직원들을 위한',
         welcomeSubtitle: '웰니스 아로마 테스트',
-        questionTitle: '한국알콜그룹 임직원들을 위한 웰니스 아로마 테스트'
+        questionTitle: '한국알콜그룹 임직원들을 위한 웰니스 아로마 테스트',
+        bgm: bgm1
       }
     }
   }
 
   const brandConfig = getBrandConfig()
+
+  // BGM 제어
+  useEffect(() => {
+    if (!showWelcome) {
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current = null
+      }
+
+      const audio = new Audio(brandConfig.bgm)
+      audio.loop = true
+      audio.volume = 0.3
+      audioRef.current = audio
+
+      if (!isMuted) {
+        audio.play().catch(e => console.log('Audio play blocked:', e))
+      }
+    }
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause()
+      }
+    }
+  }, [showWelcome, brandConfig.bgm])
+
+  // 뮤트 변경 시 제어
+  useEffect(() => {
+    if (audioRef.current) {
+      if (isMuted) {
+        audioRef.current.pause()
+      } else {
+        audioRef.current.play().catch(e => console.log('Audio play blocked:', e))
+      }
+    }
+  }, [isMuted])
+
+  // 효과음 재생 (간단한 비프음)
+  const playClickSfx = () => {
+    if (isMuted) return
+    const context = new (window.AudioContext || (window as any).webkitAudioContext)()
+    const osc = context.createOscillator()
+    const gain = context.createGain()
+    osc.type = 'sine'
+    osc.frequency.setValueAtTime(880, context.currentTime)
+    gain.gain.setValueAtTime(0.1, context.currentTime)
+    gain.gain.exponentialRampToValueAtTime(0.01, context.currentTime + 0.1)
+    osc.connect(gain)
+    gain.connect(context.destination)
+    osc.start()
+    osc.stop(context.currentTime + 0.1)
+  }
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted)
+  }
 
   // 제품 이미지 매핑
   const getProductImage = (_productName: string): string => {
@@ -611,7 +676,24 @@ function App() {
     }
   }, [currentNode])
 
+  // 마지막 상세 페이지 진입 시 5초 후 자동 리셋 기능 추가
+  useEffect(() => {
+    let timer: any
+    
+    // 결과가 있고, 첫 번째 결과 페이지가 아닐 때 (즉, 두 번째 상세 페이지일 때)
+    if (currentNode.result && !showResultPage1) {
+      timer = setTimeout(() => {
+        handleReset()
+      }, 5000) // 5000ms = 5초
+    }
+
+    return () => {
+      if (timer) clearTimeout(timer)
+    }
+  }, [currentNode, showResultPage1])
+
   const handleChoice = (choice: 'A' | 'B') => {
+    playClickSfx()
     if (currentNode.children && currentNode.children[choice]) {
       setPath([...path, choice])
       setCurrentNode(currentNode.children[choice]!)
@@ -619,6 +701,7 @@ function App() {
   }
 
   const handleBack = () => {
+    playClickSfx()
     if (path.length === 0) return
     
     const newPath = [...path]
@@ -636,6 +719,7 @@ function App() {
   }
 
   const handleReset = () => {
+    playClickSfx()
     setCurrentNode(aromaTree)
     setPath([])
     setShowWelcome(true)
@@ -643,12 +727,21 @@ function App() {
   }
 
   const handleStart = () => {
+    playClickSfx()
     setShowWelcome(false)
   }
+
+  // 사운드 토글 버튼 컴포넌트
+  const SoundToggleButton = () => (
+    <button className="sound-toggle-btn" onClick={toggleMute} aria-label="사운드 토글">
+      {isMuted ? '🔇' : '🔊'}
+    </button>
+  )
 
   if (showWelcome) {
     return (
       <div className="app">
+        <SoundToggleButton />
         <div className="container">
           <div className="welcome-screen">
             <div className="welcome-content">
@@ -683,6 +776,7 @@ function App() {
 
     return (
       <div className="app">
+        <SoundToggleButton />
         <div className="container">
           <div className="result-screen">
             <div className={(isPerfectShaping || isBreatheBreeze || isChillVibe || isRoseElixir) ? "result-page-1-content" : "result-content-simple"}>
@@ -775,6 +869,7 @@ function App() {
 
     return (
       <div className="app">
+        <SoundToggleButton />
         <div className="container">
           <div className="result-screen">
             <div className="result-page-2-content">
@@ -880,6 +975,7 @@ function App() {
   
   return (
     <div className="app">
+      <SoundToggleButton />
       <div className="container">
         <div className="question-screen">
           <div className="question-header">
