@@ -4,11 +4,10 @@ import './App.css'
 
 // 로고 이미지
 import kaiLogo from './assets/한국알콜산업 로고.svg'
-import dunamuLogo from './assets/두나무 로고.svg'
+import dunamuLogo from './assets/2.png'
 
 // 오디오 파일
 import bgm1 from './assets/1.mp3'
-import bgm2 from './assets/2.mp3'
 
 // 제품 이미지
 import perfectShapingDetailImg from './assets/Group 101.png'
@@ -593,7 +592,7 @@ function App() {
         welcomeTitle: '두니들을 위한',
         welcomeSubtitle: '웰니스 아로마 테스트',
         questionTitle: '두니들을 위한 웰니스 아로마 테스트',
-        bgm: bgm2
+        bgm: bgm1
       }
     } else {
       // /alcohol, /kai, 또는 기본 경로
