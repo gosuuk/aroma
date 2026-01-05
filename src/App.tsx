@@ -242,7 +242,7 @@ const aromaTree: AromaNode = {
                   id: 'body-performance-swelling-relax-q5',
                   question: '당신을 위한 최고의 운동 파트너는?',
                   isQuestion5: true,
-                  optionA: '"복잡한 머리를 식히고 자유를 주눈 [브리쓰 브리즈]"',
+                  optionA: '"복잡한 머리를 식히고 자유를 주는 [브리쓰 브리즈]"',
                   optionB: '"지친 마음을 위로하고 사랑을 채우는 [질 바이브]"',
                   children: {
                     A: {
@@ -683,7 +683,7 @@ function App() {
     if (currentNode.result && !showResultPage1) {
       timer = setTimeout(() => {
         handleReset()
-      }, 5000) // 5000ms = 5초
+      }, 10000) // 5000ms = 5초
     }
 
     return () => {
@@ -804,7 +804,7 @@ function App() {
                   </div>
 
                   {/* 중앙 제품 구성 이미지 */}
-                  <div className="product-composition-container">
+                  <div className="product-composition-container" onClick={() => setShowResultPage1(false)}>
                     <img 
                       src={
                         isPerfectShaping ? perfectShapingDetailImg : 
@@ -813,8 +813,9 @@ function App() {
                         roseElixirDetailImg
                       } 
                       alt="제품 구성" 
-                      className="product-composition-img" 
+                      className="product-composition-img clickable" 
                     />
+                    <div className="click-hint">클릭하여 자세히 보기 👆</div>
                   </div>
 
                   {/* 재료별 효능 박스 */}
@@ -849,9 +850,9 @@ function App() {
                 </div>
               )}
               
-              <button className="btn btn-next-large" onClick={() => setShowResultPage1(false)}>
+              {/* <button className="btn btn-next-large" onClick={() => setShowResultPage1(false)}>
                 자세히 알아보기
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
