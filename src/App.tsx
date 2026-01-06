@@ -3,7 +3,7 @@ import { useLocation, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 // 로고 이미지
-import kaiLogo from './assets/한국알콜산업 로고.svg'
+import kaiLogo from './assets/4.png'
 import dunamuLogo from './assets/2.png'
 
 // 오디오 파일
@@ -744,7 +744,7 @@ function App() {
         <div className="container">
           <div className="welcome-screen">
             <div className="welcome-content">
-              <div className="logo-placeholder">
+              <div className={`logo-placeholder ${brandConfig.logoText.includes('알콜') ? 'kai-placeholder' : ''}`}>
                 <div>
                   <img src={brandConfig.logoImage} alt={brandConfig.logoText} className="logo-image" />
                 </div>
