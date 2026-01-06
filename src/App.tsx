@@ -60,7 +60,7 @@ const productIngredients: Record<string, Ingredient[]> = {
     { name: '로즈마리 오일', emoji: '🍃', description: '집중력을 향상시키고 피로를 줄입니다.' },
     { name: '파인 오일', emoji: '🌲', description: '숲속의 맑은 공기를 연상시키는 향으로 활력을 제공합니다.' }
   ],
-  '질 바이브': [
+  '칠 바이브': [
     { name: '라벤더 오일', emoji: '💜', description: '긴장을 풀어주고 안정감을 제공합니다.' },
     { name: '스윗오렌지 오일', emoji: '🍊', description: '긍정적인 컨디션 회복에 도움을 줍니다.' },
     { name: '팔마로사 오일', emoji: '🌿', description: '심신의 균형을 맞추고 일상의 스트레스를 완화합니다.' },
@@ -343,13 +343,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-tired-empty-breath-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-6',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -366,13 +366,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-tired-empty-body-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-7',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -397,13 +397,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-tired-fill-focus-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-8',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -420,13 +420,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-tired-fill-gentle-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-9',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -459,13 +459,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-anxious-empty-breath-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-10',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -482,13 +482,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-anxious-empty-body-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-11',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -513,13 +513,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-anxious-fill-focus-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-12',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -536,13 +536,13 @@ const aromaTree: AromaNode = {
                   id: 'mind-anxious-fill-gentle-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
                   optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-13',
                       result: {
-                        name: '질 바이브',
+                        name: '칠 바이브',
                         description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
                       }
                     },
@@ -769,7 +769,7 @@ function App() {
   if (currentNode.result && showResultPage1) {
     const isPerfectShaping = currentNode.result.name.includes('퍼펙트 쉐이핑')
     const isBreatheBreeze = currentNode.result.name.includes('브리쓰 브리즈')
-    const isChillVibe = currentNode.result.name.includes('질 바이브') || currentNode.result.name.includes('칠 바이브')
+    const isChillVibe = currentNode.result.name.includes('칠 바이브') || currentNode.result.name.includes('칠 바이브')
     const isRoseElixir = currentNode.result.name.includes('로즈 엘릭서')
     const ingredients = productIngredients[currentNode.result.name] || []
 
@@ -864,7 +864,7 @@ function App() {
   if (currentNode.result && !showResultPage1) {
     const isPerfectShaping = currentNode.result.name.includes('퍼펙트 쉐이핑')
     const isBreatheBreeze = currentNode.result.name.includes('브리쓰 브리즈')
-    const isChillVibe = currentNode.result.name.includes('질 바이브') || currentNode.result.name.includes('칠 바이브')
+    const isChillVibe = currentNode.result.name.includes('칠 바이브') || currentNode.result.name.includes('칠 바이브')
     const isRoseElixir = currentNode.result.name.includes('로즈 엘릭서')
 
     return (
