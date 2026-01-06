@@ -204,33 +204,33 @@ const aromaTree: AromaNode = {
           }
         },
         B: {
-          id: 'body-performance-q3',
-          question: '"오늘 운동을 방해하는 가장 큰 요인은?"',
-          optionA: '"몸이 붓고 근육이 뭉쳐서 둔해요"',
-          optionB: '"머리가 띵하고 숨쉬기가 답답해요"',
+          id: 'performance-q3-b',
+          question: '오늘 운동은 어디에 집중하고 싶나요?',
+          optionA: '"라인 정리! 붓기를 빼고 슬림한 태를 만들고 싶어요"',
+          optionB: '"수행 능력! 지치지 않고 끝까지 집중해서 운동하고 싶어요"',
           children: {
             A: {
-              id: 'body-performance-swelling-q4',
-              question: '"어떤 도움이 가장 필요한가요?"',
-              optionA: '"운동 전 워밍업 효과로 순환 도움"',
-              optionB: '"긴장 완화와 스트레칭"',
+              id: 'performance-q4-ba',
+              question: '아로마 오일이 당신의 운동에 어떤 도움이 되길 원하나요?',
+              optionA: '"운동 전 웜업 효과를 주고, 땀 배출과 순환 도움을 주길 원해요."',
+              optionB: '"호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움을 주길 원해요."',
               children: {
                 A: {
-                  id: 'body-performance-swelling-warming-q5',
+                  id: 'performance-q5-baa',
                   question: '당신을 위한 최고의 운동 파트너는?',
                   isQuestion5: true,
-                  optionA: '"뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]"',
-                  optionB: '"답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]"',
+                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
+                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
                   children: {
                     A: {
-                      id: 'result-perfect-shaping-5',
+                      id: 'result-perfect-shaping-baa',
                       result: {
                         name: '퍼펙트 쉐이핑',
                         description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
                       }
                     },
                     B: {
-                      id: 'result-breathe-breeze-5',
+                      id: 'result-breathe-breeze-baa',
                       result: {
                         name: '브리쓰 브리즈',
                         description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
@@ -239,24 +239,24 @@ const aromaTree: AromaNode = {
                   }
                 },
                 B: {
-                  id: 'body-performance-swelling-relax-q5',
+                  id: 'performance-q5-bab',
                   question: '당신을 위한 최고의 운동 파트너는?',
                   isQuestion5: true,
-                  optionA: '"복잡한 머리를 식히고 자유를 주는 [브리쓰 브리즈]"',
-                  optionB: '"지친 마음을 위로하고 사랑을 채우는 [질 바이브]"',
+                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
+                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
                   children: {
                     A: {
-                      id: 'result-breathe-breeze-6',
+                      id: 'result-perfect-shaping-bab',
                       result: {
-                        name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
+                        name: '퍼펙트 쉐이핑',
+                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
                       }
                     },
                     B: {
-                      id: 'result-chill-vibe-4',
+                      id: 'result-breathe-breeze-bab',
                       result: {
-                        name: '질 바이브',
-                        description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
+                        name: '브리쓰 브리즈',
+                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
                       }
                     }
                   }
@@ -264,53 +264,53 @@ const aromaTree: AromaNode = {
               }
             },
             B: {
-              id: 'body-performance-breath-q4',
-              question: '"어떤 도움이 가장 필요한가요?"',
-              optionA: '호흡 개선과 에너지 충전',
-              optionB: '긴장 완화와 안정',
+              id: 'performance-q4-bb',
+              question: '아로마 오일이 당신의 운동에 어떤 도움이 되길 원하나요?',
+              optionA: '"운동 전 워밍 효과를 주고, 땀 배출과 순환 도움"',
+              optionB: '"호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움"',
               children: {
                 A: {
-                  id: 'body-performance-breath-energy-q5',
+                  id: 'performance-q5-bba',
                   question: '당신을 위한 최고의 운동 파트너는?',
                   isQuestion5: true,
-                  optionA: '복잡한 머리를 식히고 자유를 주눈 [브리쓰 브리즈]',
-                  optionB: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
+                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
                   children: {
                     A: {
-                      id: 'result-breathe-breeze-7',
-                      result: {
-                        name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
-                      }
-                    },
-                    B: {
-                      id: 'result-perfect-shaping-6',
+                      id: 'result-perfect-shaping-bba',
                       result: {
                         name: '퍼펙트 쉐이핑',
                         description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
+                      }
+                    },
+                    B: {
+                      id: 'result-breathe-breeze-bba',
+                      result: {
+                        name: '브리쓰 브리즈',
+                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
                       }
                     }
                   }
                 },
                 B: {
-                  id: 'body-performance-breath-calm-q5',
+                  id: 'performance-q5-bbb',
                   question: '당신을 위한 최고의 운동 파트너는?',
                   isQuestion5: true,
-                  optionA: '복잡한 머리를 식히고 자유를 주눈 [브리쓰 브리즈]',
-                  optionB: '지친 마음을 위로하고 사랑을 채우는 [질 바이브]',
+                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
+                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
                   children: {
                     A: {
-                      id: 'result-breathe-breeze-8',
+                      id: 'result-perfect-shaping-bbb',
                       result: {
-                        name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
+                        name: '퍼펙트 쉐이핑',
+                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
                       }
                     },
                     B: {
-                      id: 'result-chill-vibe-5',
+                      id: 'result-breathe-breeze-bbb',
                       result: {
-                        name: '질 바이브',
-                        description: '깊은 이완과 스트레스 해소를 돕는 진정 블렌드입니다.'
+                        name: '브리쓰 브리즈',
+                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
                       }
                     }
                   }
@@ -389,9 +389,9 @@ const aromaTree: AromaNode = {
             },
             B: {
               id: 'mind-tired-fill-q4',
-              question: '"어떤 도움이 가장 필요한가요?"',
-              optionA: '나에게 집중하며 에너지 채우기',
-              optionB: '부드럽게 움직이며 마음 안정',
+              question: '"아르마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
+              optionA: '"운동 후의 휴식을 더 깊고 평온하게 만들어주길 원해요."',
+              optionB: '"운동하는 동안 나만의 자신감을 채우면 좋겠어요."',
               children: {
                 A: {
                   id: 'mind-tired-fill-focus-q5',
@@ -445,15 +445,15 @@ const aromaTree: AromaNode = {
         },
         B: {
           id: 'mind-anxious-q3',
-          question: '"지금 상태에서 가장 필요한 것은?"',
-          optionA: '스트레칭이나 명상으로 \'비움\'',
-          optionB: '요가나 필라테스로 \'채움\'',
+          question: '"지금 상태에서 가장 필요한 움직임은 무엇인가요?"',
+          optionA: '"격한 운동보다는 스트레칭이나 명상으로 "비움"이 필요해요."',
+          optionB: '"요가나 필라테스처럼 나에게 온전히 집중하는 "채움"이 필요해요."',
           children: {
             A: {
               id: 'mind-anxious-empty-q4',
-              question: '"어떤 도움이 가장 필요한가요?"',
-              optionA: '깊은 호흡과 마음 비우기',
-              optionB: '몸 풀면서 스트레스 날리기',
+              question: '"아르마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
+              optionA: '"운동 후의 휴식을 더 깊고 평온하게 만들어주길 원해요."',
+              optionB: '"운동하는 동안 나만의 자신감을 채우면 좋겠어요."',
               children: {
                 A: {
                   id: 'mind-anxious-empty-breath-q5',
