@@ -505,9 +505,9 @@ const aromaTree: AromaNode = {
             },
             B: {
               id: 'mind-anxious-fill-q4',
-              question: '"어떤 도움이 가장 필요한가요?"',
-              optionA: '나에게 집중하며 에너지 채우기',
-              optionB: '부드럽게 움직이며 마음 안정',
+              question: '"아르마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
+              optionA: '"운동 후의 휴식을 더 깊고 평온하게 만들어주길 원해요."',
+              optionB: '"운동하는 동안 나만의 자신감을 채우면 좋겠어요."',
               children: {
                 A: {
                   id: 'mind-anxious-fill-focus-q5',
