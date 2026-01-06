@@ -683,7 +683,7 @@ function App() {
     if (currentNode.result && !showResultPage1) {
       timer = setTimeout(() => {
         handleReset()
-      }, 10000) // 5000ms = 5초
+      }, 20000) // 5000ms = 5초
     }
 
     return () => {
@@ -774,7 +774,7 @@ function App() {
     const ingredients = productIngredients[currentNode.result.name] || []
 
     return (
-      <div className="app">
+      <div className="app app-result-page-1">
         <SoundToggleButton />
         <div className="container">
           <div className="result-screen">
