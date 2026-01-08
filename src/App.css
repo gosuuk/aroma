@@ -31,13 +31,13 @@ body {
 .app {
   min-height: 100vh;
   display: flex;
-  align-items: center; /* 다른 모든 페이지는 기존처럼 중앙 정렬 */
+  align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
 }
 
 .app.app-result-page-1 {
-  align-items: flex-start; /* 결과 페이지 1만 상단 정렬 */
+  align-items: flex-start;
 }
 
 .container {
@@ -577,7 +577,7 @@ body {
   color: #8c625a;
   padding: 0.3rem 0.5rem;
   border-radius: 20px;
-  font-size: 0.7rem; /* 기본 폰트 크기 축소 */
+  font-size: 0.7rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   white-space: nowrap;
@@ -587,7 +587,7 @@ body {
 }
 
 .mini-box-content {
-  font-size: 0.7rem; /* 기본 폰트 크기 축소 */
+  font-size: 0.7rem;
   color: #2d2d2d;
   line-height: 1.3;
   word-break: keep-all;
@@ -1674,3 +1674,204 @@ body {
     margin-top: 0.75rem;
   }
 }
+
+/* 키오스크 화면 전용 (1:2 비율, 600x1200 ~ 900x1800) */
+@media (min-width: 580px) and (max-width: 920px) and (min-height: 1160px) and (max-height: 1840px) and (orientation: portrait) {
+  .app {
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app.app-result-page-1 {
+    align-items: center;
+  }
+
+  .container {
+    max-width: 520px;
+    width: 90%;
+  }
+
+  /* Welcome Screen */
+  .welcome-content {
+    border-radius: 40px;
+    padding: 4rem 2.5rem;
+  }
+
+  .logo-placeholder {
+    height: 180px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .logo-image {
+    max-width: 420px;
+    max-height: 160px;
+  }
+
+  .kai-placeholder {
+    min-height: 200px;
+  }
+
+  .kai-placeholder .logo-image {
+    max-width: 450px;
+    max-height: 170px;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+  }
+
+  .welcome-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .welcome-description {
+    font-size: 1.15rem;
+    margin: 1.8rem 0 2.5rem;
+  }
+
+  .btn-start {
+    padding: 1.1rem 3.5rem;
+    font-size: 1.4rem;
+    border-radius: 50px;
+  }
+
+  /* Question Screen */
+  .logo-small-image {
+    max-width: 480px;
+    max-height: 100px;
+  }
+
+  .question-text {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .options-container {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .option-button {
+    border-radius: 28px;
+    padding: 2.2rem 1.8rem;
+  }
+
+  .option-text {
+    font-size: 1.35rem;
+  }
+
+  .option-q5 {
+    max-width: 480px;
+    min-height: 130px;
+    border-radius: 28px;
+    padding: 1.8rem 2rem;
+  }
+
+  .option-q5 .option-text {
+    font-size: 1.25rem;
+  }
+
+  .product-highlight {
+    margin-top: 0.6rem;
+    font-size: 1.35rem;
+  }
+
+  /* Result Page 1 */
+  .result-page-1-content {
+    border-radius: 40px;
+    padding: 2.5rem 2rem;
+    gap: 1.8rem;
+  }
+
+  .result-page-1-header {
+    margin-bottom: 1rem;
+  }
+
+  .result-page-1-subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .result-page-1-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .result-page-1-tagline {
+    font-size: 1.1rem;
+    border-bottom: 1.5px solid #d4ccc4;
+    padding-bottom: 0.7rem;
+  }
+
+  .product-composition-container {
+    max-width: 380px;
+    margin: 1rem 0;
+  }
+
+  .mini-box-title {
+    padding: 0.4rem 0.8rem;
+    border-radius: 22px;
+    font-size: 0.8rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .mini-box-content {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .result-description-box {
+    border-radius: 22px;
+    padding: 1.5rem 1.8rem;
+  }
+
+  .result-description-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Result Page 2 */
+  .usage-badge-v2 {
+    padding: 0.45rem 1.3rem;
+    border-radius: 22px;
+    font-size: 0.95rem;
+  }
+
+  .usage-text-v2 {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .body-image-box-v2 {
+    border-radius: 38px;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 1rem 0;
+  }
+
+  .body-image-v2 {
+    max-height: 350px;
+  }
+
+  .result-buttons-v2 {
+    gap: 1rem;
+    max-width: 350px;
+    margin-top: 1rem;
+  }
+
+  .btn-outline-v2,
+  .btn-dark-v2 {
+    padding: 1.1rem;
+    font-size: 1.15rem;
+    border-radius: 50px;
+  }
+}
+
