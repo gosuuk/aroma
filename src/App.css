@@ -1675,12 +1675,12 @@ body {
   }
 }
 
-/* 키오스크 화면 전용 (1:2 비율, 600x1200 ~ 900x1800) */
-/* 1:1.8 ~ 1:2.2 비율만 적용 (태블릿 1:1.3~1.5 제외) */
-@media (min-width: 580px) and (max-width: 920px) 
-   and (min-height: 1160px) and (max-height: 1840px) 
+/* 키오스크 화면 전용 (1:2 비율, 600x1200 ~ 1080x1920) */
+/* 1:1.7 ~ 1:2.2 비율만 적용 (태블릿 1:1.3~1.5 제외) */
+@media (min-width: 580px) and (max-width: 1200px) 
+   and (min-height: 1160px) and (max-height: 2200px) 
    and (min-aspect-ratio: 1/2.2) 
-   and (max-aspect-ratio: 1/1.8) 
+   and (max-aspect-ratio: 1/1.7) 
    and (orientation: portrait) {
   .app {
     padding: 3rem 2rem;
@@ -1694,189 +1694,189 @@ body {
   }
 
   .container {
-    max-width: 520px;
-    width: 90%;
+    max-width: 880px;
+    width: 85%;
   }
 
   /* Welcome Screen */
   .welcome-content {
-    border-radius: 40px;
-    padding: 4rem 2.5rem;
+    border-radius: 48px;
+    padding: 6rem 4rem;
   }
 
   .logo-placeholder {
-    height: 180px;
-    margin: 0 auto 2.5rem;
+    height: 280px;
+    margin: 0 auto 4rem;
   }
 
   .logo-image {
-    max-width: 420px;
-    max-height: 160px;
+    max-width: 680px;
+    max-height: 240px;
   }
 
   .kai-placeholder {
-    min-height: 200px;
+    min-height: 300px;
   }
 
   .kai-placeholder .logo-image {
-    max-width: 450px;
-    max-height: 170px;
+    max-width: 720px;
+    max-height: 260px;
   }
 
   .logo-text {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
   }
 
   .welcome-title {
-    font-size: 1.8rem;
-    margin-bottom: 0.4rem;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
   }
 
   .welcome-subtitle {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
   }
 
   .welcome-description {
-    font-size: 1.15rem;
-    margin: 1.8rem 0 2.5rem;
+    font-size: 1.8rem;
+    margin: 2.5rem 0 3.5rem;
   }
 
   .btn-start {
-    padding: 1.1rem 3.5rem;
-    font-size: 1.4rem;
-    border-radius: 50px;
+    padding: 1.5rem 5rem;
+    font-size: 2rem;
+    border-radius: 60px;
   }
 
   /* Question Screen */
   .logo-small-image {
-    max-width: 480px;
-    max-height: 100px;
+    max-width: 750px;
+    max-height: 140px;
   }
 
   .question-text {
-    font-size: 1.6rem;
-    margin-bottom: 2.5rem;
+    font-size: 2.4rem;
+    margin-bottom: 3.5rem;
   }
 
   .options-container {
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .option-button {
-    border-radius: 28px;
-    padding: 2.2rem 1.8rem;
+    border-radius: 32px;
+    padding: 3rem 2.5rem;
   }
 
   .option-text {
-    font-size: 1.35rem;
+    font-size: 1.9rem;
   }
 
   .option-q5 {
-    max-width: 480px;
-    min-height: 130px;
-    border-radius: 28px;
-    padding: 1.8rem 2rem;
+    max-width: 700px;
+    min-height: 180px;
+    border-radius: 32px;
+    padding: 2.5rem 3rem;
   }
 
   .option-q5 .option-text {
-    font-size: 1.25rem;
+    font-size: 1.7rem;
   }
 
   .product-highlight {
-    margin-top: 0.6rem;
-    font-size: 1.35rem;
+    margin-top: 0.8rem;
+    font-size: 1.8rem;
   }
 
   /* Result Page 1 */
   .result-page-1-content {
-    border-radius: 40px;
-    padding: 2.5rem 2rem;
-    gap: 1.8rem;
+    border-radius: 48px;
+    padding: 4rem 3.5rem;
+    gap: 2.5rem;
   }
 
   .result-page-1-header {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .result-page-1-subtitle {
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
   }
 
   .result-page-1-title {
-    font-size: 2.2rem;
-    margin-bottom: 1.2rem;
+    font-size: 3.2rem;
+    margin-bottom: 1.8rem;
   }
 
   .result-page-1-tagline {
-    font-size: 1.1rem;
-    border-bottom: 1.5px solid #d4ccc4;
-    padding-bottom: 0.7rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #d4ccc4;
+    padding-bottom: 0.9rem;
   }
 
   .product-composition-container {
-    max-width: 380px;
-    margin: 1rem 0;
+    max-width: 550px;
+    margin: 1.5rem 0;
   }
 
   .mini-box-title {
-    padding: 0.4rem 0.8rem;
-    border-radius: 22px;
-    font-size: 0.8rem;
-    margin-bottom: 0.9rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 26px;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
   }
 
   .mini-box-content {
-    font-size: 0.75rem;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .result-description-box {
-    border-radius: 22px;
-    padding: 1.5rem 1.8rem;
+    border-radius: 28px;
+    padding: 2.2rem 2.5rem;
   }
 
   .result-description-box p {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.35rem;
+    line-height: 1.8;
   }
 
   /* Result Page 2 */
   .usage-badge-v2 {
-    padding: 0.45rem 1.3rem;
-    border-radius: 22px;
-    font-size: 0.95rem;
+    padding: 0.6rem 1.8rem;
+    border-radius: 26px;
+    font-size: 1.25rem;
   }
 
   .usage-text-v2 {
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 1.4rem;
+    line-height: 1.8;
   }
 
   .body-image-box-v2 {
-    border-radius: 38px;
-    padding: 2rem;
-    max-width: 400px;
-    margin: 1rem 0;
+    border-radius: 44px;
+    padding: 2.8rem;
+    max-width: 580px;
+    margin: 1.5rem 0;
   }
 
   .body-image-v2 {
-    max-height: 350px;
+    max-height: 520px;
   }
 
   .result-buttons-v2 {
-    gap: 1rem;
-    max-width: 350px;
-    margin-top: 1rem;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin-top: 1.5rem;
   }
 
   .btn-outline-v2,
   .btn-dark-v2 {
-    padding: 1.1rem;
-    font-size: 1.15rem;
-    border-radius: 50px;
+    padding: 1.4rem;
+    font-size: 1.5rem;
+    border-radius: 60px;
   }
 }
 
