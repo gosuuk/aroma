@@ -1676,7 +1676,12 @@ body {
 }
 
 /* 키오스크 화면 전용 (1:2 비율, 600x1200 ~ 900x1800) */
-@media (min-width: 580px) and (max-width: 920px) and (min-height: 1160px) and (max-height: 1840px) and (orientation: portrait) {
+/* 1:1.8 ~ 1:2.2 비율만 적용 (태블릿 1:1.3~1.5 제외) */
+@media (min-width: 580px) and (max-width: 920px) 
+   and (min-height: 1160px) and (max-height: 1840px) 
+   and (min-aspect-ratio: 1/2.2) 
+   and (max-aspect-ratio: 1/1.8) 
+   and (orientation: portrait) {
   .app {
     padding: 3rem 2rem;
     display: flex;
