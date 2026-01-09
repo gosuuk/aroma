@@ -683,7 +683,7 @@ function App() {
     if (currentNode.result && !showResultPage1) {
       timer = setTimeout(() => {
         handleReset()
-      }, 20000) // 5000ms = 5초
+      }, 60000) // 5000ms = 5초
     }
 
     return () => {
