@@ -181,9 +181,9 @@ body {
 
 .logo-small-image {
   max-width: 610px;
-  max-height: 180px;
+  max-height: 200px;
   /* 120px -> 180px 확대 */
-  width: 50vw;
+  width: 70vw;
   /* 가로 비율도 일정 부분 확보 */
   height: auto;
   object-fit: contain;
@@ -251,7 +251,7 @@ body {
   background: white;
   border: 1px solid #f0e6e0;
   border-radius: 35px;
-  padding: 2rem 1rem;
+  padding: 3.5rem 1rem;
   /* Horizontal padding 2rem -> 1rem */
   text-align: center;
   cursor: pointer;
@@ -281,7 +281,7 @@ body {
 }
 
 .option-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   /* 1.4rem -> 1.5rem */
   font-weight: 700;
   color: #2d2d2d;
@@ -305,7 +305,7 @@ body {
 
 .option-q5 {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   min-height: 120px;
   background: white;
   border: 1px solid var(--border);
@@ -794,21 +794,28 @@ body.full-page-lock {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: flex-end;
   pointer-events: none;
   z-index: 1;
-  overflow: hidden;
-  /* Prevent child image from causing scroll */
+  overflow: visible !important;
+  /* 로고가 항상 보이도록 visible로 변경 */
 }
 
 .logo-overlay img {
-  width: 80%;
-  /* 너무 커지지 않도록 살짝 축소 */
+  width: 100% !important;
+  /* 화면 가로 사이즈 100% 채우기 */
+  max-width: 100% !important;
   height: auto;
-  max-height: 100%;
+  max-height: 60vh;
+  min-height: 100px;
+  /* 최소 높이 보장 */
   object-fit: contain;
+  object-position: bottom center;
+  display: block !important;
+  opacity: 1 !important;
+  /* 항상 보이도록 */
 }
 
 /* HumanBalance Specific Layout */
@@ -844,6 +851,52 @@ body.full-page-lock {
 .humanb-layout .sub-description {
   margin-top: 1rem;
   line-height: 1.8;
+}
+
+/* 모든 화면 크기에서 로고 오버레이 보이도록 보장 */
+@media (min-width: 0px) {
+  .logo-overlay {
+    z-index: 1 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    visibility: visible !important;
+  }
+
+  .logo-overlay img {
+    width: 100% !important;
+    /* 화면 가로 사이즈 100% 채우기 */
+    max-width: 100% !important;
+    max-height: 60vh !important;
+    min-height: 100px !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    position: relative !important;
+  }
+
+  .humanb-layout .logo-overlay {
+    align-items: center !important;
+    z-index: 0 !important;
+  }
+
+  .humanb-layout .logo-overlay img {
+    width: 120vmin !important;
+    height: 120vmin !important;
+    opacity: 0.7 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: auto !important;
+  }
 }
 
 /* Mobile Responsiveness for Full Page Welcome */
@@ -891,10 +944,33 @@ body.full-page-lock {
     font-size: 1.1rem;
   }
 
+  .logo-overlay {
+    padding-bottom: 0 !important;
+    display: flex !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    z-index: 1 !important;
+  }
+
+  .logo-overlay img {
+    width: 100% !important;
+    /* 화면 가로 사이즈 100% 채우기 */
+    max-width: 100% !important;
+    max-height: 40vh !important;
+    min-height: 80px !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+  }
+
   .humanb-layout .logo-overlay img {
     width: 200vmin;
     /* Mobile specific scaling to fill more background */
     opacity: 0.6;
+    max-width: none !important;
+    min-height: auto !important;
   }
 }
 
@@ -1557,6 +1633,49 @@ body.full-page-lock {
 /* Responsive */
 /* 태블릿 세로 모드 - 결과 페이지 1 최적화 (키오스크 제외) */
 @media (min-width: 768px) and (max-width: 1440px) and (max-aspect-ratio: 1/1.6) and (orientation: portrait) {
+  /* 로고 오버레이 태블릿에서 보이도록 */
+  .logo-overlay {
+    z-index: 1 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    visibility: visible !important;
+  }
+
+  .logo-overlay img {
+    width: 100% !important;
+    /* 화면 가로 사이즈 100% 채우기 */
+    max-width: 100% !important;
+    max-height: 50vh !important;
+    min-height: 100px !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    position: relative !important;
+  }
+
+  .humanb-layout .logo-overlay {
+    align-items: center !important;
+    z-index: 0 !important;
+  }
+
+  .humanb-layout .logo-overlay img {
+    width: 120vmin !important;
+    height: 120vmin !important;
+    opacity: 0.7 !important;
+    max-height: none !important;
+    max-width: none !important;
+  }
+
   .result-page-1-content {
     padding: 0.25rem 1.2rem 0.3rem;
     gap: 0.15rem;
@@ -1635,6 +1754,48 @@ body.full-page-lock {
 
 /* 태블릿 세로 모드 - 결과 페이지 최적화 (키오스크 제외) */
 @media (min-width: 641px) and (max-width: 1024px) and (max-height: 1024px) and (max-aspect-ratio: 1/1.6) {
+  /* 로고 오버레이 태블릿에서 보이도록 */
+  .logo-overlay {
+    z-index: 1 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    visibility: visible !important;
+  }
+
+  .logo-overlay img {
+    width: 100% !important;
+    /* 화면 가로 사이즈 100% 채우기 */
+    max-width: 100% !important;
+    max-height: 50vh !important;
+    min-height: 100px !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    position: relative !important;
+  }
+
+  .humanb-layout .logo-overlay {
+    align-items: center !important;
+    z-index: 0 !important;
+  }
+
+  .humanb-layout .logo-overlay img {
+    width: 120vmin !important;
+    height: 120vmin !important;
+    opacity: 0.7 !important;
+    max-height: none !important;
+    max-width: none !important;
+  }
 
   /* Result Page 1 최적화 */
   .result-page-1-content {
