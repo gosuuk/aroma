@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Playfair+Display:ital,wght@1,400&display=swap');
+
 :root {
   --primary: #6d5649;
   --primary-light: #8b7262;
@@ -649,8 +651,6 @@ body {
     padding: 0 1rem;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Playfair+Display:ital,wght@1,400&display=swap');
 
 /* Full Page Layout for Odgraphy & HumanBalance */
 .app.full-page-layout {
