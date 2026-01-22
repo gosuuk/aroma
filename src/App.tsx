@@ -603,8 +603,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-perfect',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -614,8 +614,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-breathe',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을 ‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -633,8 +633,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-perfect-2',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을 ‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -644,8 +644,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-breathe-2',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을 ‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -671,8 +671,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-perfect-3',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을 ‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -682,8 +682,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-breathe-3',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을 ‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -701,8 +701,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-perfect-4',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을 ‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -712,8 +712,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-breathe-4',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
-                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해 ‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을 ‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
                   children: {
                     A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
                     B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
@@ -815,8 +815,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-chill-3',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
-                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어, 회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸, 안정감을 채우는 [ 로즈 엘릭서 ]',
                   children: {
                     A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
                     B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
@@ -826,8 +826,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-rose-3',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
-                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어, 회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸, 안정감을 채우는 [ 로즈 엘릭서 ]',
                   children: {
                     A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
                     B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
@@ -845,8 +845,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-chill-4',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
-                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어, 회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸, 안정감을 채우는 [ 로즈 엘릭서 ]',
                   children: {
                     A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
                     B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
@@ -856,8 +856,8 @@ const humanbTree: AromaNode = {
                   id: 'hb-result-rose-4',
                   question: '오늘 컨디션에 맞춘 블렌딩은?',
                   isQuestion5: true,
-                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
-                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어, 회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸, 안정감을 채우는 [ 로즈 엘릭서 ]',
                   children: {
                     A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
                     B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
