@@ -877,7 +877,7 @@ interface BrandConfig {
   logoImage: string
   welcomeTitle: string
   welcomeSubtitle: string
-  questionTitle: string
+  questionTitle: string | React.ReactNode
   bgm: any
   tree: AromaNode
   // 신규 필드
@@ -929,7 +929,12 @@ function App() {
             에센셜 오일과 사용 방법을 안내합니다.
           </>
         ),
-        questionTitle: '오늘의 컨디션에 맞는 아로마를 추천해드립니다',
+        questionTitle: (
+          <>
+            오늘의 컨디션에 맞는<br />
+            아로마를 추천해드립니다
+          </>
+        ),
         logoSmallImage: odgraphyLogoSmall,
         logoBottomImage: odgraphyLogoBottom,
         backgroundImage: odgraphyBg,
@@ -949,7 +954,12 @@ function App() {
             나에게 맞는 아로마 블렌딩과 사용 루틴을 안내해드립니다.
           </>
         ),
-        questionTitle: '오늘의 컨디션에 맞는 아로마를 추천해드립니다',
+        questionTitle: (
+          <>
+            오늘의 컨디션에 맞는<br />
+            아로마를 추천해드립니다
+          </>
+        ),
         logoSmallImage: humanbLogoSmall,
         logoBottomImage: humanbLogoBg,
         backgroundImage: humanbBgNone,
@@ -973,6 +983,19 @@ function App() {
 
 
   // BGM 제어
+  useEffect(() => {
+    // 풀페이지 레이아웃일 때 바디 스크롤 막기
+    if (brandConfig.isFullPageWelcome && showWelcome) {
+      document.body.classList.add('full-page-lock')
+    } else {
+      document.body.classList.remove('full-page-lock')
+    }
+
+    return () => {
+      document.body.classList.remove('full-page-lock')
+    }
+  }, [brandConfig.isFullPageWelcome, showWelcome])
+
   useEffect(() => {
     if (!showWelcome) {
       if (audioRef.current) {
