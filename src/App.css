@@ -251,7 +251,7 @@ body {
   background: white;
   border: 1px solid #f0e6e0;
   border-radius: 35px;
-  padding: 3.5rem 1rem;
+  padding: 2rem 1rem;
   /* Horizontal padding 2rem -> 1rem */
   text-align: center;
   cursor: pointer;
@@ -281,7 +281,7 @@ body {
 }
 
 .option-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   /* 1.4rem -> 1.5rem */
   font-weight: 700;
   color: #2d2d2d;
@@ -305,7 +305,7 @@ body {
 
 .option-q5 {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   min-height: 120px;
   background: white;
   border: 1px solid var(--border);
