@@ -6,6 +6,17 @@ import './App.css'
 import kaiLogo from './assets/4.png'
 import dunamuLogo from './assets/2.png'
 
+// 오드그라피 & 휴먼밸런스 에셋
+import odgraphyLogoStart from './assets/오드그라피 로고_시작화면.svg'
+import odgraphyLogoBottom from './assets/오드그라피 로고_시작화면_아래.svg'
+import odgraphyLogoSmall from './assets/오드그라피 로고_테스트 문항.svg'
+import odgraphyBg from './assets/테스트 시작 페이지 배경_오드그라피.png'
+
+import humanbLogoStart from './assets/휴먼밸런스 로고_시작화면.svg'
+import humanbLogoSmall from './assets/휴먼밸런스 로고_테스트 문항.svg'
+import humanbBgNone from './assets/테스트 시작 페이지배경(휴밸)_로고없음.png'
+import humanbLogoBg from './assets/휴밸 테스트 시작페이지 배경 로고.svg'
+
 // 오디오 파일
 import bgm1 from './assets/1.mp3'
 
@@ -77,34 +88,34 @@ const productIngredients: Record<string, Ingredient[]> = {
 
 const aromaTree: AromaNode = {
   id: 'start',
-  question: '"당신의 컨디션은 어떠신가요?"',
-  optionA: '"몸이 무거워 움직이기가 힘들어요."',
-  optionB: '"마음이 복잡해요."',
+  question: '오늘 당신의\n피부& 바디 컨디션은 어떤가요?',
+  optionA: '“몸이 무겁고 순환이 안 되는 느낌이에요.”',
+  optionB: '“피부도 마음도 예민하고 회복이 필요해요.”',
   children: {
     A: {
       id: 'performance-q2',
-      question: '오늘 운동을 방해하는 가장 큰 요인은 무엇인가요?',
-      optionA: '"몸이 통통 붓고 근육이 꽉 뭉쳐서 둔한 느낌이에요"',
-      optionB: '"머리가 띵하고 숨쉬기가 답답해서 집중이 안 돼요"',
+      question: '지금 가장 크게 느껴지는\n고민은 무엇인가요?',
+      optionA: '“몸이 퉁퉁 붓고 단단하게 뭉친 느낌이에요.”',
+      optionB: '“머리가 무겁고 몸이 답답한 느낌이에요.”',
       children: {
         A: {
           id: 'performance-a-q3',
-          question: '오늘 운동은 어디에 집중하고 싶나요?',
-          optionA: '"라인 정리! 붓기를 빼고 슬림한 태를 만들고 싶어요"',
-          optionB: '"수행 능력! 지치지 않고 끝까지 집중해서 운동하고 싶어요"',
+          question: '오늘 관리에서 가장 집중하고 싶은\n포인트는 무엇인가요?',
+          optionA: '“라인 정리! 붓기를 빼고\n가볍고 슬림한 느낌을 만들고 싶어요.”',
+          optionB: '“컨디션 회복! 맑아지고 개운한\n상태를 만들고 싶어요.”',
           children: {
             A: {
               id: 'performance-a-a-q4',
-              question: '아로마 오일이 당신의 운동에 어떤 도움이 되길 원하나요?',
-              optionA: '"운동 전 웜업 효과를 주고, 땀 배출과 순환 도움을 주길 원해요."',
-              optionB: '"호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움을 주길 원해요."',
+              question: '아로마 오일이 오늘 관리에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“순환을 깨우고, 따뜻하게 풀리면서\n배출이 잘 되길 원해요.”',
+              optionB: '“호흡이 편해지고, 답답함이 풀리면서\n몸이 개운해지길 원해요.”',
               children: {
                 A: {
                   id: 'performance-a-a-a-q5',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping',
@@ -124,10 +135,10 @@ const aromaTree: AromaNode = {
                 },
                 B: {
                   id: 'performance-a-a-b-q5',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-2',
@@ -149,16 +160,16 @@ const aromaTree: AromaNode = {
             },
             B: {
               id: 'performance-a-b-redirect',
-              question: '아로마 오일이 당신의 운동에 어떤 도움이 되길 원하나요?',
-              optionA: '"운동 전 워밍 효과를 주고, 땀 배출과 순환 도움"',
-              optionB: '"호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움"',
+              question: '오늘 관리에서 가장 집중하고 싶은\n포인트는 무엇인가요?',
+              optionA: '“라인 정리! 붓기를 빼고\n가볍고 슬림한 느낌을 만들고 싶어요.”',
+              optionB: '“컨디션 회복! 맑아지고 개운한\n상태를 만들고 싶어요.”',
               children: {
                 A: {
                   id: 'performance-a-b-a-q5',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-3',
@@ -178,10 +189,10 @@ const aromaTree: AromaNode = {
                 },
                 B: {
                   id: 'performance-a-b-b-q5',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-4',
@@ -205,22 +216,22 @@ const aromaTree: AromaNode = {
         },
         B: {
           id: 'performance-q3-b',
-          question: '오늘 운동은 어디에 집중하고 싶나요?',
-          optionA: '"라인 정리! 붓기를 빼고 슬림한 태를 만들고 싶어요"',
-          optionB: '"수행 능력! 지치지 않고 끝까지 집중해서 운동하고 싶어요"',
+          question: '오늘 관리에서 가장 집중하고 싶은\n포인트는 무엇인가요?',
+          optionA: '“라인 정리! 붓기를 빼고\n가볍고 슬림한 느낌을 만들고 싶어요.”',
+          optionB: '“컨디션 회복! 맑아지고 개운한\n상태를 만들고 싶어요.”',
           children: {
             A: {
               id: 'performance-q4-ba',
-              question: '아로마 오일이 당신의 운동에 어떤 도움이 되길 원하나요?',
-              optionA: '"운동 전 웜업 효과를 주고, 땀 배출과 순환 도움을 주길 원해요."',
-              optionB: '"호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움을 주길 원해요."',
+              question: '아로마 오일이 오늘 관리에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“순환을 깨우고, 따뜻하게 풀리면서\n배출이 잘 되길 원해요.”',
+              optionB: '“호흡이 편해지고, 답답함이 풀리면서\n몸이 개운해지길 원해요.”',
               children: {
                 A: {
                   id: 'performance-q5-baa',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-baa',
@@ -240,10 +251,10 @@ const aromaTree: AromaNode = {
                 },
                 B: {
                   id: 'performance-q5-bab',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-bab',
@@ -265,16 +276,16 @@ const aromaTree: AromaNode = {
             },
             B: {
               id: 'performance-q4-bb',
-              question: '아로마 오일이 당신의 운동에 어떤 도움이 되길 원하나요?',
-              optionA: '"운동 전 워밍 효과를 주고, 땀 배출과 순환 도움"',
-              optionB: '"호흡 길을 열어 산소 공급을 늘리고, 운동 퍼포먼스에 도움"',
+              question: '아로마 오일이 오늘 관리에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“순환을 깨우고, 따뜻하게 풀리면서\n배출이 잘 되길 원해요.”',
+              optionB: '“호흡이 편해지고, 답답함이 풀리면서\n몸이 개운해지길 원해요.”',
               children: {
                 A: {
                   id: 'performance-q5-bba',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-bba',
@@ -294,10 +305,10 @@ const aromaTree: AromaNode = {
                 },
                 B: {
                   id: 'performance-q5-bbb',
-                  question: '당신을 위한 최고의 운동 파트너는?',
+                  question: '오늘 당신을 위한\n최고의 에스테틱 파트너는?',
                   isQuestion5: true,
-                  optionA: '뭉친 곳을 녹이고 라인을 살리는 [퍼펙트 쉐이핑]',
-                  optionB: '답답함을 뚫고 에너지를 채우는 [브리쓰 브리즈]',
+                  optionA: '뭉친 흐름을 풀고 라인을 깨우는\n[ 퍼펙트 쉐이핑 ]',
+                  optionB: '답답함을 정화하고 컨디션을 끌어올리는\n[ 브리쓰 브리즈 ]',
                   children: {
                     A: {
                       id: 'result-perfect-shaping-bbb',
@@ -323,28 +334,28 @@ const aromaTree: AromaNode = {
     },
     B: {
       id: 'mind-q2',
-      question: '"지금 당신의 마음 상태를 표현한다면?"',
-      optionA: '모든 게 귀찮고 멍때리고 싶은 \'방전\' 상태',
-      optionB: '작은 일에도 예민하고 기복이 심한 \'불안\' 상태',
+      question: '지금 당신의\n마음 상태는 무엇인가요?',
+      optionA: '“아무것도 하기 싫고 멍해진 ‘방전’ 상태.”',
+      optionB: '“작은 자극에도 예민해진 ‘불안’ 상태.”',
       children: {
         A: {
           id: 'mind-tired-q3',
-          question: '지금 상태에서 가장 필요한 움직임은 무엇인가요?"',
-          optionA: '"격한 운동보다는 스트레칭이나 명상으로 "비움"이 필요해요."',
-          optionB: '"요가나 필라테스처럼 나에게 온전히 집중하는 "채움"이 필요해요."',
+          question: '지금 상태에서 피부와 몸에\n가장 필요한 것은 무엇인가요?',
+          optionA: '“자극보다 휴식.\n풀어주고 비워주는 관리가 필요해요.”',
+          optionB: '“내게 집중하는 시간.\n채워지고 안정되는 관리가 필요해요.”',
           children: {
             A: {
               id: 'mind-tired-empty-q4',
-              question: '"아르마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
-              optionA: '"운동 후의 휴식을 더 깊고 평온하게 만들어주길 원해요."',
-              optionB: '"운동하는 동안 나만의 자신감을 채우면 좋겠어요."',
+              question: '아로마 오일이 오늘 관리에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“관리 후에도 깊은 휴식감이\n오래 남았으면 좋겠어요.”',
+              optionB: '“자신감과 회복을 주는 관리를 원해요.”',
               children: {
                 A: {
                   id: 'mind-tired-empty-breath-q5',
-                  question: '당신을 위한 최고의 힐링 파트너는?',
+                  question: '당신을 위한\n최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[ 칠 바이브 ]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[ 로즈 엘릭서 ]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-6',
@@ -364,10 +375,10 @@ const aromaTree: AromaNode = {
                 },
                 B: {
                   id: 'mind-tired-empty-body-q5',
-                  question: '당신을 위한 최고의 힐링 파트너는?',
+                  question: '당신을 위한\n최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[ 칠 바이브 ]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[ 로즈 엘릭서 ]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-7',
@@ -389,16 +400,16 @@ const aromaTree: AromaNode = {
             },
             B: {
               id: 'mind-tired-fill-q4',
-              question: '"아르마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
-              optionA: '"운동 후의 휴식을 더 깊고 평온하게 만들어주길 원해요."',
-              optionB: '"운동하는 동안 나만의 자신감을 채우면 좋겠어요."',
+              question: '아로마 오일이 오늘 관리에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“관리 후에도 깊은 휴식감이\n오래 남았으면 좋겠어요.”',
+              optionB: '“자신감과 회복을 주는 관리를 원해요.”',
               children: {
                 A: {
                   id: 'mind-tired-fill-focus-q5',
-                  question: '당신을 위한 최고의 힐링 파트너는?',
+                  question: '당신을 위한\n최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[ 칠 바이브 ]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[ 로즈 엘릭서 ]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-8',
@@ -418,10 +429,10 @@ const aromaTree: AromaNode = {
                 },
                 B: {
                   id: 'mind-tired-fill-gentle-q5',
-                  question: '당신을 위한 최고의 힐링 파트너는?',
+                  question: '당신을 위한\n최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[ 칠 바이브 ]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[ 로즈 엘릭서 ]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-9',
@@ -445,22 +456,22 @@ const aromaTree: AromaNode = {
         },
         B: {
           id: 'mind-anxious-q3',
-          question: '"지금 상태에서 가장 필요한 움직임은 무엇인가요?"',
-          optionA: '"격한 운동보다는 스트레칭이나 명상으로 "비움"이 필요해요."',
-          optionB: '"요가나 필라테스처럼 나에게 온전히 집중하는 "채움"이 필요해요."',
+          question: '지금 상태에서 피부와 몸에\n가장 필요한 것은 무엇인가요?',
+          optionA: '“자극보다 휴식.\n풀어주고 비워주는 관리가 필요해요.”',
+          optionB: '“내게 집중하는 시간.\n채워지고 안정되는 관리가 필요해요.”',
           children: {
             A: {
               id: 'mind-anxious-empty-q4',
-              question: '"아르마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
-              optionA: '"운동 후의 휴식을 더 깊고 평온하게 만들어주길 원해요."',
-              optionB: '"운동하는 동안 나만의 자신감을 채우면 좋겠어요."',
+              question: '아로마 오일이 오늘 관리에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“관리 후에도 깊은 휴식감이\n오래 남았으면 좋겠어요.”',
+              optionB: '“자신감과 회복을 주는 관리를 원해요.”',
               children: {
                 A: {
                   id: 'mind-anxious-empty-breath-q5',
-                  question: '당신을 위한 최고의 힐링 파트너는?',
+                  question: '당신을 위한\n최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[ 칠 바이브 ]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[ 로즈 엘릭서 ]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-10',
@@ -480,10 +491,10 @@ const aromaTree: AromaNode = {
                 },
                 B: {
                   id: 'mind-anxious-empty-body-q5',
-                  question: '당신을 위한 최고의 힐링 파트너는?',
+                  question: '당신을 위한\n최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[ 칠 바이브 ]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[ 로즈 엘릭서 ]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-11',
@@ -564,6 +575,303 @@ const aromaTree: AromaNode = {
   }
 }
 
+const humanbTree: AromaNode = {
+  id: 'start',
+  question: '오늘 당신의 컨디션은 어떤가요?',
+  optionA: '“몸이 무겁고 붓거나 뭉친 느낌이 있어요.”',
+  optionB: '“예민하고 지쳐서 회복이 필요한 느낌이에요.”',
+  children: {
+    A: {
+      id: 'hb-body-q2',
+      question: '"지금 가장 크게 느껴지는 불편은 무엇인가요?"',
+      optionA: '“붓고 뭉치고, 몸이 단단하게 굳은 느낌이에요.”',
+      optionB: '“머리가 무겁고, 몸이 답답한 느낌이에요.”',
+      children: {
+        A: {
+          id: 'hb-body-q3',
+          question: '오늘 웰니스 세션에서\n가장 원하는 변화는 무엇인가요?',
+          optionA: '“뭉침이 이완되고,\n몸이 가벼워지는 느낌을 원해요.”',
+          optionB: '“머리까지 맑아지고,\n개운하게 리셋되는 느낌을 원해요.”',
+          children: {
+            A: {
+              id: 'hb-body-q4-a',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“따뜻하게 풀리면서, 몸의 흐름이\n부드럽게 살아나는 느낌이면 좋겠어요.”',
+              optionB: '“호흡이 편해지고, 답답함이 풀려\n컨디션이 정돈되는 느낌이면 좋겠어요.”',
+              children: {
+                A: {
+                  id: 'hb-result-perfect',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-breathe',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                }
+              }
+            },
+            B: {
+              id: 'hb-body-q4-b',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“따뜻하게 풀리면서, 몸의 흐름이\n부드럽게 살아나는 느낌이면 좋겠어요.”',
+              optionB: '“호흡이 편해지고, 답답함이 풀려\n컨디션이 정돈되는 느낌이면 좋겠어요.”',
+              children: {
+                A: {
+                  id: 'hb-result-perfect-2',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-breathe-2',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                }
+              }
+            }
+          }
+        },
+        B: {
+          id: 'hb-body-q3-b',
+          question: '오늘 웰니스 세션에서\n가장 원하는 변화는 무엇인가요?',
+          optionA: '“뭉침이 이완되고,\n몸이 가벼워지는 느낌을 원해요.”',
+          optionB: '“머리까지 맑아지고,\n개운하게 리셋되는 느낌을 원해요.”',
+          children: {
+            A: {
+              id: 'hb-body-q4-c',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“따뜻하게 풀리면서, 몸의 흐름이\n부드럽게 살아나는 느낌이면 좋겠어요.”',
+              optionB: '“호흡이 편해지고, 답답함이 풀려\n컨디션이 정돈되는 느낌이면 좋겠어요.”',
+              children: {
+                A: {
+                  id: 'hb-result-perfect-3',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-breathe-3',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                }
+              }
+            },
+            B: {
+              id: 'hb-body-q4-d',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“따뜻하게 풀리면서, 몸의 흐름이\n부드럽게 살아나는 느낌이면 좋겠어요.”',
+              optionB: '“호흡이 편해지고, 답답함이 풀려\n컨디션이 정돈되는 느낌이면 좋겠어요.”',
+              children: {
+                A: {
+                  id: 'hb-result-perfect-4',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-breathe-4',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '몸의 흐름을 깨우고, 뭉친 긴장을 이완해\n‘가벼움’을 만드는 [ 퍼펙트 쉐이핑 ]',
+                  optionB: '호흡과 답답함을 정돈해, 컨디션을\n‘맑게 리셋’하는 [ 브리쓰 브리즈 ]',
+                  children: {
+                    A: { id: 'r1', result: { name: '퍼펙트 쉐이핑', description: '' } },
+                    B: { id: 'r2', result: { name: '브리쓰 브리즈', description: '' } }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    B: {
+      id: 'hb-mind-q2',
+      question: '지금 마음 상태는 어떤가요?',
+      optionA: '“기운이 없고 멍해진 ‘방전’ 상태예요.”',
+      optionB: '“작은 자극에도 예민한 ‘과부하’ 상태예요.”',
+      children: {
+        A: {
+          id: 'hb-mind-q3',
+          question: '오늘 웰니스 세션에서\n가장 필요한 것은 무엇인가요?',
+          optionA: '“쉬면서 비워지는 회복감(깊은 휴식)이 필요해요.”',
+          optionB: '“안정감과 충전감\n(내 페이스로 돌아오는 느낌)이 필요해요.”',
+          children: {
+            A: {
+              id: 'hb-mind-q4-a',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“세션 후에도 편안함이 오래가고,\n잠이 더 잘 왔으면 해요.”',
+              optionB: '“마음이 차분해지고,\n예민함이 부드럽게 가라앉았으면 해요.”',
+              children: {
+                A: {
+                  id: 'hb-result-chill',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-rose',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                }
+              }
+            },
+            B: {
+              id: 'hb-mind-q4-b',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“세션 후에도 편안함이 오래가고,\n잠이 더 잘 왔으면 해요.”',
+              optionB: '“마음이 차분해지고,\n예민함이 부드럽게 가라앉았으면 해요.”',
+              children: {
+                A: {
+                  id: 'hb-result-chill-2',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-rose-2',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                }
+              }
+            }
+          }
+        },
+        B: {
+          id: 'hb-mind-q3-b',
+          question: '오늘 웰니스 세션에서\n가장 필요한 것은 무엇인가요?',
+          optionA: '“쉬면서 비워지는 회복감(깊은 휴식)이 필요해요.”',
+          optionB: '“안정감과 충전감\n(내 페이스로 돌아오는 느낌)이 필요해요.”',
+          children: {
+            A: {
+              id: 'hb-mind-q4-c',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“세션 후에도 편안함이 오래가고,\n잠이 더 잘 왔으면 해요.”',
+              optionB: '“마음이 차분해지고,\n예민함이 부드럽게 가라앉았으면 해요.”',
+              children: {
+                A: {
+                  id: 'hb-result-chill-3',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-rose-3',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                }
+              }
+            },
+            B: {
+              id: 'hb-mind-q4-d',
+              question: '아로마가 오늘의 세션에\n어떤 도움을 주면 좋겠나요?',
+              optionA: '“세션 후에도 편안함이 오래가고,\n잠이 더 잘 왔으면 해요.”',
+              optionB: '“마음이 차분해지고,\n예민함이 부드럽게 가라앉았으면 해요.”',
+              children: {
+                A: {
+                  id: 'hb-result-chill-4',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                },
+                B: {
+                  id: 'hb-result-rose-4',
+                  question: '오늘 컨디션에 맞춘 블렌딩은?',
+                  isQuestion5: true,
+                  optionA: '신경을 낮추고 깊은 휴식 리듬을 만들어,\n회복감을 오래 남기는 [ 칠 바이브 ]',
+                  optionB: '예민해진 마음과 감각을 부드럽게 감싸,\n안정감을 채우는 [ 로즈 엘릭서 ]',
+                  children: {
+                    A: { id: 'r3', result: { name: '칠 바이브', description: '' } },
+                    B: { id: 'r4', result: { name: '로즈 엘릭서', description: '' } }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 interface BrandConfig {
   logoText: string
   logoImage: string
@@ -571,19 +879,33 @@ interface BrandConfig {
   welcomeSubtitle: string
   questionTitle: string
   bgm: any
+  tree: AromaNode
+  // 신규 필드
+  welcomeDescription?: string | React.ReactNode
+  backgroundImage?: string
+  logoBottomImage?: string
+  logoSmallImage?: string
+  isFullPageWelcome?: boolean
 }
 
 function App() {
   const location = useLocation()
-  const [currentNode, setCurrentNode] = useState<AromaNode>(aromaTree)
+  const brandConfig = getBrandConfig()
+  const [currentNode, setCurrentNode] = useState<AromaNode>(brandConfig.tree)
   const [showWelcome, setShowWelcome] = useState(true)
   const [path, setPath] = useState<string[]>([])
   const [showResultPage1, setShowResultPage1] = useState(true)
   const [isMuted, setIsMuted] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
+  // 브랜드 트리 변경 시 노드 초기화
+  useEffect(() => {
+    setCurrentNode(brandConfig.tree)
+    setPath([])
+  }, [location.pathname])
+
   // 경로에 따라 브랜드 설정
-  const getBrandConfig = (): BrandConfig => {
+  function getBrandConfig(): BrandConfig {
     const pathname = location.pathname
     if (pathname.startsWith('/dunamu')) {
       return {
@@ -592,7 +914,48 @@ function App() {
         welcomeTitle: '두니들을 위한',
         welcomeSubtitle: '웰니스 아로마 테스트',
         questionTitle: '두니들을 위한 웰니스 아로마 테스트',
-        bgm: bgm1
+        bgm: bgm1,
+        tree: aromaTree
+      }
+    } else if (pathname.startsWith('/odgraphy')) {
+      return {
+        logoText: 'OD GRAPHY',
+        logoImage: odgraphyLogoStart,
+        welcomeTitle: '오늘의 컨디션에 맞는',
+        welcomeSubtitle: '아로마를 추천해드립니다',
+        welcomeDescription: (
+          <>
+            간단한 질문으로 몸과 마음의 상태를 점검하고,<br />
+            에센셜 오일과 사용 방법을 안내합니다.
+          </>
+        ),
+        questionTitle: '오늘의 컨디션에 맞는 아로마를 추천해드립니다',
+        logoSmallImage: odgraphyLogoSmall,
+        logoBottomImage: odgraphyLogoBottom,
+        backgroundImage: odgraphyBg,
+        isFullPageWelcome: true,
+        bgm: bgm1,
+        tree: aromaTree
+      }
+    } else if (pathname.startsWith('/humanb')) {
+      return {
+        logoText: 'HUMAN BALANCE',
+        logoImage: humanbLogoStart,
+        welcomeTitle: '오늘의 컨디션에 맞는',
+        welcomeSubtitle: '아로마를 추천해드립니다',
+        welcomeDescription: (
+          <>
+            간단한 질문으로 오늘의 컨디션을 확인하고,<br />
+            나에게 맞는 아로마 블렌딩과 사용 루틴을 안내해드립니다.
+          </>
+        ),
+        questionTitle: '오늘의 컨디션에 맞는 아로마를 추천해드립니다',
+        logoSmallImage: humanbLogoSmall,
+        logoBottomImage: humanbLogoBg,
+        backgroundImage: humanbBgNone,
+        isFullPageWelcome: true,
+        bgm: bgm1,
+        tree: humanbTree
       }
     } else {
       // /alcohol, /kai, 또는 기본 경로
@@ -602,12 +965,12 @@ function App() {
         welcomeTitle: '한국알콜그룹 임직원들을 위한',
         welcomeSubtitle: '웰니스 아로마 테스트',
         questionTitle: '한국알콜그룹 임직원들을 위한 웰니스 아로마 테스트',
-        bgm: bgm1
+        bgm: bgm1,
+        tree: aromaTree
       }
     }
   }
 
-  const brandConfig = getBrandConfig()
 
   // BGM 제어
   useEffect(() => {
@@ -678,7 +1041,7 @@ function App() {
   // 마지막 상세 페이지 진입 시 5초 후 자동 리셋 기능 추가
   useEffect(() => {
     let timer: any
-    
+
     // 결과가 있고, 첫 번째 결과 페이지가 아닐 때 (즉, 두 번째 상세 페이지일 때)
     if (currentNode.result && !showResultPage1) {
       timer = setTimeout(() => {
@@ -702,24 +1065,24 @@ function App() {
   const handleBack = () => {
     playClickSfx()
     if (path.length === 0) return
-    
+
     const newPath = [...path]
     newPath.pop()
-    
-    let node = aromaTree
+
+    let node = brandConfig.tree // Changed from aromaTree to brandConfig.tree
     for (const step of newPath) {
       if (node.children && node.children[step as 'A' | 'B']) {
         node = node.children[step as 'A' | 'B']!
       }
     }
-    
+
     setPath(newPath)
     setCurrentNode(node)
   }
 
   const handleReset = () => {
     playClickSfx()
-    setCurrentNode(aromaTree)
+    setCurrentNode(brandConfig.tree)
     setPath([])
     setShowWelcome(true)
     setShowResultPage1(true)
@@ -738,6 +1101,46 @@ function App() {
   )
 
   if (showWelcome) {
+    if (brandConfig.isFullPageWelcome) {
+      const isHumanb = brandConfig.logoText.includes('HUMAN')
+      return (
+        <div className={`app full-page-layout ${isHumanb ? 'humanb-layout' : ''}`} style={{ backgroundImage: `url(${brandConfig.backgroundImage})` }}>
+          <SoundToggleButton />
+
+          {brandConfig.logoBottomImage && (
+            <div className="logo-overlay">
+              <img src={brandConfig.logoBottomImage} alt="logo-overlay" />
+            </div>
+          )}
+
+          <div className="full-page-welcome">
+            <div className="welcome-header">
+              <img src={brandConfig.logoImage} alt={brandConfig.logoText} className="brand-logo" />
+            </div>
+
+            <div className="welcome-divider"></div>
+
+            <div className="welcome-body">
+              <div className="wellness-badge">Wellness Assessment</div>
+              <h1 className="main-title">
+                {brandConfig.welcomeTitle}<br />
+                {brandConfig.welcomeSubtitle}
+              </h1>
+              <p className="sub-description">
+                {brandConfig.welcomeDescription}
+              </p>
+            </div>
+
+            <div className="welcome-footer">
+              <button className="btn-start-round" onClick={handleStart}>
+                테스트 시작하기
+              </button>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     return (
       <div className="app">
         <SoundToggleButton />
@@ -805,15 +1208,15 @@ function App() {
 
                   {/* 중앙 제품 구성 이미지 */}
                   <div className="product-composition-container" onClick={() => setShowResultPage1(false)}>
-                    <img 
+                    <img
                       src={
-                        isPerfectShaping ? perfectShapingDetailImg : 
-                        isBreatheBreeze ? breatheBreezeDetailImg : 
-                        isChillVibe ? chillVibeDetailImg :
-                        roseElixirDetailImg
-                      } 
-                      alt="제품 구성" 
-                      className="product-composition-img clickable" 
+                        isPerfectShaping ? perfectShapingDetailImg :
+                          isBreatheBreeze ? breatheBreezeDetailImg :
+                            isChillVibe ? chillVibeDetailImg :
+                              roseElixirDetailImg
+                      }
+                      alt="제품 구성"
+                      className="product-composition-img clickable"
                     />
                     <div className="click-hint">클릭하여 자세히 보기 👆</div>
                   </div>
@@ -842,14 +1245,14 @@ function App() {
                 </>
               ) : (
                 <div className="product-image-only">
-                  <img 
-                    src={getProductImage(currentNode.result.name)} 
+                  <img
+                    src={getProductImage(currentNode.result.name)}
                     alt={currentNode.result.name}
                     className="product-img-full"
                   />
                 </div>
               )}
-              
+
               {/* <button className="btn btn-next-large" onClick={() => setShowResultPage1(false)}>
                 자세히 알아보기
               </button> */}
@@ -972,7 +1375,7 @@ function App() {
   // 질문 페이지
   const totalQuestions = 5
   const isQuestion5 = currentNode.isQuestion5 === true
-  
+
   return (
     <div className="app">
       <SoundToggleButton />
@@ -980,7 +1383,7 @@ function App() {
         <div className="question-screen">
           <div className="question-header">
             <div className="logo-small">
-              <img src={brandConfig.logoImage} alt={brandConfig.logoText} className="logo-small-image" />
+              <img src={brandConfig.logoSmallImage || brandConfig.logoImage} alt={brandConfig.logoText} className="logo-small-image" />
             </div>
           </div>
 
@@ -988,8 +1391,8 @@ function App() {
             <div className="question-title-text">{brandConfig.questionTitle}</div>
             <div className="progress-container">
               {[...Array(totalQuestions)].map((_, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`progress-dot ${index < path.length + 1 ? 'active' : ''}`}
                 />
               ))}
@@ -1001,7 +1404,7 @@ function App() {
             <h2 className="question-text">{currentNode.question}</h2>
 
             <div className={`options-container ${isQuestion5 ? 'options-q5' : ''}`}>
-              <button 
+              <button
                 className={`option-button option-a ${isQuestion5 ? 'option-q5' : ''}`}
                 onClick={() => handleChoice('A')}
               >
@@ -1015,7 +1418,7 @@ function App() {
                 </span>
               </button>
 
-              <button 
+              <button
                 className={`option-button option-b ${isQuestion5 ? 'option-q5' : ''}`}
                 onClick={() => handleChoice('B')}
               >
@@ -1047,6 +1450,10 @@ function AromaTest() {
     <Routes>
       <Route path="/dunamu" element={<App />} />
       <Route path="/dunamu/*" element={<App />} />
+      <Route path="/odgraphy" element={<App />} />
+      <Route path="/odgraphy/*" element={<App />} />
+      <Route path="/humanb" element={<App />} />
+      <Route path="/humanb/*" element={<App />} />
       <Route path="/alcohol" element={<App />} />
       <Route path="/alcohol/*" element={<App />} />
       <Route path="/kai" element={<App />} />
