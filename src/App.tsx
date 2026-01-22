@@ -10,11 +10,11 @@ import dunamuLogo from './assets/2.png'
 import odgraphyLogoStart from './assets/odgraphy.svg'
 import odgraphyLogoBottom from './assets/odgraphy2.svg'
 import odgraphyLogoSmall from './assets/odgraphy3.svg'
-import odgraphyBg from './assets/테스트 시작 페이지 배경_오드그라피.png'
+import odgraphyBg from './assets/odgrapy4.png'
 
 import humanbLogoStart from './assets/hum.svg'
 import humanbLogoSmall from './assets/hum1.svg'
-import humanbBgNone from './assets/테스트 시작 페이지배경(휴밸)_로고없음.png'
+import humanbBgNone from './assets/hum3.png'
 import humanbLogoBg from './assets/hum2.svg'
 
 // 오디오 파일
