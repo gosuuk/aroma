@@ -7,7 +7,7 @@ import kaiLogo from './assets/4.png'
 import dunamuLogo from './assets/2.png'
 
 // 오드그라피 & 휴먼밸런스 에셋
-import odgraphyLogoStart from './assets/오드그라피 로고_시작화면.svg'
+import odgraphyLogoStart from './assets/odgraphy.svg'
 import odgraphyLogoBottom from './assets/오드그라피 로고_시작화면_아래.svg'
 import odgraphyLogoSmall from './assets/오드그라피 로고_테스트 문항.svg'
 import odgraphyBg from './assets/테스트 시작 페이지 배경_오드그라피.png'
