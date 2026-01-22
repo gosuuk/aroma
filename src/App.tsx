@@ -8,14 +8,14 @@ import dunamuLogo from './assets/2.png'
 
 // 오드그라피 & 휴먼밸런스 에셋
 import odgraphyLogoStart from './assets/odgraphy.svg'
-import odgraphyLogoBottom from './assets/오드그라피 로고_시작화면_아래.svg'
-import odgraphyLogoSmall from './assets/오드그라피 로고_테스트 문항.svg'
+import odgraphyLogoBottom from './assets/odgraphy2.svg'
+import odgraphyLogoSmall from './assets/odgraphy3.svg'
 import odgraphyBg from './assets/테스트 시작 페이지 배경_오드그라피.png'
 
-import humanbLogoStart from './assets/휴먼밸런스 로고_시작화면.svg'
-import humanbLogoSmall from './assets/휴먼밸런스 로고_테스트 문항.svg'
+import humanbLogoStart from './assets/hum.svg'
+import humanbLogoSmall from './assets/hum1.svg'
 import humanbBgNone from './assets/테스트 시작 페이지배경(휴밸)_로고없음.png'
-import humanbLogoBg from './assets/휴밸 테스트 시작페이지 배경 로고.svg'
+import humanbLogoBg from './assets/hum2.svg'
 
 // 오디오 파일
 import bgm1 from './assets/1.mp3'
