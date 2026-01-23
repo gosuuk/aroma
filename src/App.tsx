@@ -121,14 +121,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다. 워밍업 효과로 땀 배출을 촉진하고 순환을 도와줍니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다. 호흡을 깊게 하고 산소 공급을 늘려 퍼포먼스를 향상시킵니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -144,14 +144,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping-2',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다. 워밍업 효과로 땀 배출을 촉진하고 순환을 도와줍니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze-2',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다. 호흡을 깊게 하고 산소 공급을 늘려 퍼포먼스를 향상시킵니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -175,14 +175,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping-3',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다. 워밍업 효과로 땀 배출을 촉진하고 순환을 도와줍니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze-3',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다. 호흡을 깊게 하고 산소 공급을 늘려 퍼포먼스를 향상시킵니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -198,14 +198,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping-4',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다. 워밍업 효과로 땀 배출을 촉진하고 순환을 도와줍니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze-4',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다. 호흡을 깊게 하고 산소 공급을 늘려 퍼포먼스를 향상시킵니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -237,14 +237,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping-baa',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze-baa',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -260,14 +260,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping-bab',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze-bab',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -291,14 +291,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping-bba',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze-bba',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -314,14 +314,14 @@ const aromaTree: AromaNode = {
                       id: 'result-perfect-shaping-bbb',
                       result: {
                         name: '퍼펙트 쉐이핑',
-                        description: '붓기를 빼고 라인을 정리하는 데 최적화된 블렌드입니다.'
+                        description: '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'
                       }
                     },
                     B: {
                       id: 'result-breathe-breeze-bbb',
                       result: {
                         name: '브리쓰 브리즈',
-                        description: '호흡을 깊게 하고 활력을 불어넣는 상쾌한 블렌드입니다.'
+                        description: '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'
                       }
                     }
                   }
@@ -1259,8 +1259,8 @@ function App() {
                   {/* 하단 설명 텍스트 박스 */}
                   <div className="result-description-box">
                     <p>
-                      {isPerfectShaping && '퍼펙트 쉐이핑은 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고, 활력을 증진시켜줍니다.'}
-                      {isBreatheBreeze && '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득 찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 운동 중 집중력을 향상시킵니다.'}
+                      {isPerfectShaping && '퍼펙트 쉐이핑은 케어나 운동 전후에 사용하기 적합한 에센셜 오일로, 신진대사를 촉진하고 지방 연소를 돕는 성분이 포함되어 있습니다. 기분을 상쾌하게 하고 활력을 증진시켜 줍니다.'}
+                      {isBreatheBreeze && '브리쓰 브리즈는 호흡을 원활하게 하고 에너지를 높여주는 향으로 가득찬 에센셜 오일입니다. 신선한 향이 주는 상쾌함이 케어 중 집중력을 향상시키고 개운함을 줍니다.'}
                       {isChillVibe && '칠 바이브는 긴장을 줄이고 마음을 안정시키는 성분들이 포함된 에센셜 오일입니다. 스트레스 완화에 도움을 주며, 정신적인 평화를 제공합니다.'}
                       {isRoseElixir && '로즈 엘릭서는 감정을 진정시키고, 사랑과 자아 존중감을 증진시키는 역할을 합니다. 달콤한 장미 향기는 마음을 편안하게 해줍니다.'}
                     </p>
@@ -1334,7 +1334,7 @@ function App() {
               <div className="usage-section-v2">
                 <div className="usage-badge-v2">도포 Tip</div>
                 <p className="usage-text-v2">
-                  {isPerfectShaping && <>운등 10분 전에 도포하면 좋습니다.</>}
+                  {isPerfectShaping && <>케어나 운동 10분 전에 도포하면 좋습니다.</>}
                   {isBreatheBreeze && (
                     <>
                       목 뒤에 소량을 도포해<br />
@@ -1343,12 +1343,12 @@ function App() {
                   )}
                   {isChillVibe && (
                     <>
-                      운동 전 또는 운동 후에도 사용 가능합니다.
+                      케어 전, 후 또는 수면 시 사용 가능합니다.
                     </>
                   )}
                   {isRoseElixir && (
                     <>
-                      운동 전에 감정 안정과<br />
+                      케어 전, 후 안정과<br />
                       집중력 향상에 효과적입니다.
                     </>
                   )}
