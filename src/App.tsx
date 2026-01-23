@@ -1292,6 +1292,7 @@ function App() {
     const isBreatheBreeze = currentNode.result.name.includes('브리쓰 브리즈')
     const isChillVibe = currentNode.result.name.includes('칠 바이브') || currentNode.result.name.includes('칠 바이브')
     const isRoseElixir = currentNode.result.name.includes('로즈 엘릭서')
+    const isHumanbBrand = brandConfig.logoText.includes('HUMAN')
 
     return (
       <div className="app">
@@ -1343,13 +1344,22 @@ function App() {
                   )}
                   {isChillVibe && (
                     <>
-                      케어 전, 후 또는 수면 시 사용 가능합니다.
+                      {isHumanbBrand ? '운동 전 또는 운동 후에도 사용 가능합니다.' : '케어 전, 후 또는 수면 시 사용 가능합니다.'}
                     </>
                   )}
                   {isRoseElixir && (
                     <>
-                      케어 전, 후 안정과<br />
-                      집중력 향상에 효과적입니다.
+                      {isHumanbBrand ? (
+                        <>
+                          운동 전에 감정 안정과<br />
+                          집중력 향상에 효과적입니다.
+                        </>
+                      ) : (
+                        <>
+                          케어 전, 후 안정과<br />
+                          집중력 향상에 효과적입니다.
+                        </>
+                      )}
                     </>
                   )}
                 </p>
