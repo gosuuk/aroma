@@ -516,16 +516,16 @@ const aromaTree: AromaNode = {
             },
             B: {
               id: 'mind-anxious-fill-q4',
-              question: '"아르마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
-              optionA: '"운동 후의 휴식을 더 깊고 평온하게 만들어주길 원해요."',
-              optionB: '"운동하는 동안 나만의 자신감을 채우면 좋겠어요."',
+              question: '"아로마 오일이 당신에게 어떤 도움이 되길 원하나요?"',
+              optionA: '"관리 후에도 깊은 휴식감이 오래 남았으면 좋겠어요."',
+              optionB: '"자신감과 회복을 주는 관리를 원해요."',
               children: {
                 A: {
                   id: 'mind-anxious-fill-focus-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[칠 바이브]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-12',
@@ -547,8 +547,8 @@ const aromaTree: AromaNode = {
                   id: 'mind-anxious-fill-gentle-q5',
                   question: '당신을 위한 최고의 힐링 파트너는?',
                   isQuestion5: true,
-                  optionA: '지친 마음을 위로하고 사랑을 채우는 [칠 바이브]',
-                  optionB: '마음의 평온과 감정의 균형을 찾아주는 [로즈 엘릭서]',
+                  optionA: '피부 회복 리듬을 깨우고 안정감을 채우는\n[칠 바이브]',
+                  optionB: '예민해진 피부와 마음을 감싸는\n[로즈 엘릭서]',
                   children: {
                     A: {
                       id: 'result-chill-vibe-13',
