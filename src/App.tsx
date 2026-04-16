@@ -86,6 +86,14 @@ const productIngredients: Record<string, Ingredient[]> = {
   ]
 }
 
+const createResultNode = (id: string, name: string, description = ''): AromaNode => ({
+  id,
+  result: {
+    name,
+    description
+  }
+})
+
 const aromaTree: AromaNode = {
   id: 'start',
   question: '오늘 당신의\n피부& 바디 컨디션은 어떤가요?',
@@ -872,20 +880,162 @@ const humanbTree: AromaNode = {
   }
 }
 
+const anantiTree: AromaNode = {
+  id: 'ananti-start',
+  question: '오늘 당신의 컨디션은\n어떤가요?',
+  optionA: '순환이 안되는 무거운 느낌이에요.',
+  optionB: '피로감이 느껴지고 몸도 마음도 지친 느낌이에요.',
+  children: {
+    A: {
+      id: 'ananti-body-q2',
+      question: '지금 가장 크게 느껴지는\n고민은 무엇인가요?',
+      optionA: '몸이 통통 붓고 단단하게 뭉친 느낌이에요.',
+      optionB: '머리가 무겁고 몸이 답답한 느낌이에요.',
+      children: {
+        A: {
+          id: 'ananti-body-swelling-q3',
+          question: '오늘 가장 집중 관리하고 싶은\n포인트는 무엇인가요?',
+          optionA: '라인 정리. 붓기를 빼고 가볍고 슬림한 느낌을 만들고 싶어요.',
+          optionB: '컨디션 회복. 맑아지고 개운한 상태를 만들고 싶어요.',
+          children: {
+            A: {
+              id: 'ananti-body-swelling-q4-a',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              children: {
+                A: createResultNode('ananti-result-perfect-1', '퍼펙트 쉐이핑'),
+                B: createResultNode('ananti-result-breathe-1', '브리쓰 브리즈')
+              }
+            },
+            B: {
+              id: 'ananti-body-swelling-q4-b',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              children: {
+                A: createResultNode('ananti-result-perfect-2', '퍼펙트 쉐이핑'),
+                B: createResultNode('ananti-result-breathe-2', '브리쓰 브리즈')
+              }
+            }
+          }
+        },
+        B: {
+          id: 'ananti-body-heavy-q3',
+          question: '오늘 가장 집중 관리하고 싶은\n포인트는 무엇인가요?',
+          optionA: '라인 정리. 붓기를 빼고 가볍고 슬림한 느낌을 만들고 싶어요.',
+          optionB: '컨디션 회복. 맑아지고 개운한 상태를 만들고 싶어요.',
+          children: {
+            A: {
+              id: 'ananti-body-heavy-q4-a',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              children: {
+                A: createResultNode('ananti-result-perfect-3', '퍼펙트 쉐이핑'),
+                B: createResultNode('ananti-result-breathe-3', '브리쓰 브리즈')
+              }
+            },
+            B: {
+              id: 'ananti-body-heavy-q4-b',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              children: {
+                A: createResultNode('ananti-result-perfect-4', '퍼펙트 쉐이핑'),
+                B: createResultNode('ananti-result-breathe-4', '브리쓰 브리즈')
+              }
+            }
+          }
+        }
+      }
+    },
+    B: {
+      id: 'ananti-mind-q2',
+      question: '지금 당신의 마음 상태는\n무엇인가요?',
+      optionA: '아무것도 하기 싫고 멍해진 방전 상태.',
+      optionB: '작은 자극에도 예민해진 불안 상태.',
+      children: {
+        A: {
+          id: 'ananti-mind-drained-q3',
+          question: '지금 상태에서 가장 나에게\n필요한 것은 무엇인가요?',
+          optionA: '자극보다 휴식. 풀어주고 비워주는 것이 필요해요.',
+          optionB: '내게 집중하는 시간. 채워지고 보다 더 나아짐이 필요해요.',
+          children: {
+            A: {
+              id: 'ananti-mind-drained-q4-a',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              children: {
+                A: createResultNode('ananti-result-chill-1', '칠 바이브'),
+                B: createResultNode('ananti-result-rose-1', '로즈 엘릭서')
+              }
+            },
+            B: {
+              id: 'ananti-mind-drained-q4-b',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              children: {
+                A: createResultNode('ananti-result-chill-2', '칠 바이브'),
+                B: createResultNode('ananti-result-rose-2', '로즈 엘릭서')
+              }
+            }
+          }
+        },
+        B: {
+          id: 'ananti-mind-sensitive-q3',
+          question: '지금 상태에서 가장 나에게\n필요한 것은 무엇인가요?',
+          optionA: '자극보다 휴식. 풀어주고 비워주는 것이 필요해요.',
+          optionB: '내게 집중하는 시간. 채워지고 보다 더 나아짐이 필요해요.',
+          children: {
+            A: {
+              id: 'ananti-mind-sensitive-q4-a',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              children: {
+                A: createResultNode('ananti-result-chill-3', '칠 바이브'),
+                B: createResultNode('ananti-result-rose-3', '로즈 엘릭서')
+              }
+            },
+            B: {
+              id: 'ananti-mind-sensitive-q4-b',
+              question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              children: {
+                A: createResultNode('ananti-result-chill-4', '칠 바이브'),
+                B: createResultNode('ananti-result-rose-4', '로즈 엘릭서')
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 interface BrandConfig {
   logoText: string
-  logoImage: string
-  welcomeTitle: string
-  welcomeSubtitle: string
+  logoImage?: string
+  logoSubtext?: string
+  welcomeTitle: string | React.ReactNode
+  welcomeSubtitle: string | React.ReactNode
   questionTitle: string | React.ReactNode
   bgm: any
   tree: AromaNode
+  questionCount: number
   // 신규 필드
   welcomeDescription?: string | React.ReactNode
+  welcomeBadge?: string | React.ReactNode
   backgroundImage?: string
   logoBottomImage?: string
   logoSmallImage?: string
   isFullPageWelcome?: boolean
+  appClassName?: string
+  resultFooterText?: string
 }
 
 function App() {
@@ -915,7 +1065,9 @@ function App() {
         welcomeSubtitle: '웰니스 아로마 테스트',
         questionTitle: '두니들을 위한 웰니스 아로마 테스트',
         bgm: bgm1,
-        tree: aromaTree
+        tree: aromaTree,
+        questionCount: 5,
+        resultFooterText: 'OD GRAPHY × HUMAN BALANCE'
       }
     } else if (pathname.startsWith('/odgraphy')) {
       return {
@@ -940,7 +1092,35 @@ function App() {
         backgroundImage: odgraphyBg,
         isFullPageWelcome: true,
         bgm: bgm1,
-        tree: aromaTree
+        tree: aromaTree,
+        questionCount: 5,
+        resultFooterText: 'OD GRAPHY × HUMAN BALANCE'
+      }
+    } else if (pathname.startsWith('/ananti')) {
+      return {
+        logoText: 'ANANTI',
+        logoSubtext: '플로팅 이너밸런스 저니',
+        welcomeTitle: '아난티 여행자들을 위한',
+        welcomeSubtitle: '웰니스 아로마 테스트',
+        welcomeDescription: (
+          <>
+            당신의 몸과 마음의 균형을 맞추는<br />
+            플로팅 전용 이너밸런스 오일을 찾아드립니다.
+          </>
+        ),
+        welcomeBadge: 'Floating Inner Balance Journey',
+        questionTitle: (
+          <>
+            아난티 여행자들을 위한<br />
+            웰니스 아로마 테스트
+          </>
+        ),
+        isFullPageWelcome: true,
+        bgm: bgm1,
+        tree: anantiTree,
+        questionCount: 4,
+        appClassName: 'ananti-theme ananti-layout',
+        resultFooterText: 'ANANTI FLOATING INNER BALANCE JOURNEY'
       }
     } else if (pathname.startsWith('/humanb')) {
       return {
@@ -965,7 +1145,9 @@ function App() {
         backgroundImage: humanbBgNone,
         isFullPageWelcome: true,
         bgm: bgm1,
-        tree: humanbTree
+        tree: humanbTree,
+        questionCount: 5,
+        resultFooterText: 'OD GRAPHY × HUMAN BALANCE'
       }
     } else {
       // /alcohol, /kai, 또는 기본 경로
@@ -976,9 +1158,34 @@ function App() {
         welcomeSubtitle: '웰니스 아로마 테스트',
         questionTitle: '한국알콜그룹 임직원들을 위한 웰니스 아로마 테스트',
         bgm: bgm1,
-        tree: aromaTree
+        tree: aromaTree,
+        questionCount: 5,
+        resultFooterText: 'OD GRAPHY × HUMAN BALANCE'
       }
     }
+  }
+
+  const renderBrandMark = (variant: 'large' | 'small') => {
+    const logoSrc = variant === 'small' ? (brandConfig.logoSmallImage || brandConfig.logoImage) : brandConfig.logoImage
+
+    if (logoSrc) {
+      return (
+        <img
+          src={logoSrc}
+          alt={brandConfig.logoText}
+          className={variant === 'small' ? 'logo-small-image' : 'brand-logo'}
+        />
+      )
+    }
+
+    return (
+      <div className={`brand-wordmark ${variant === 'small' ? 'brand-wordmark-small' : 'brand-wordmark-large'}`}>
+        <div className="brand-wordmark-main">{brandConfig.logoText}</div>
+        {brandConfig.logoSubtext && (
+          <div className="brand-wordmark-sub">{brandConfig.logoSubtext}</div>
+        )}
+      </div>
+    )
   }
 
 
@@ -1123,11 +1330,19 @@ function App() {
     </button>
   )
 
+  const appClassName = brandConfig.appClassName ? ` ${brandConfig.appClassName}` : ''
+  const fullPageBackgroundStyle = brandConfig.backgroundImage
+    ? { backgroundImage: `url(${brandConfig.backgroundImage})` }
+    : undefined
+
   if (showWelcome) {
     if (brandConfig.isFullPageWelcome) {
       const isHumanb = brandConfig.logoText.includes('HUMAN')
       return (
-        <div className={`app full-page-layout ${isHumanb ? 'humanb-layout' : ''}`} style={{ backgroundImage: `url(${brandConfig.backgroundImage})` }}>
+        <div
+          className={`app full-page-layout${appClassName}${isHumanb ? ' humanb-layout' : ''}`}
+          style={fullPageBackgroundStyle}
+        >
           <SoundToggleButton />
 
           {brandConfig.logoBottomImage && (
@@ -1138,13 +1353,13 @@ function App() {
 
           <div className="full-page-welcome">
             <div className="welcome-header">
-              <img src={brandConfig.logoImage} alt={brandConfig.logoText} className="brand-logo" />
+              {renderBrandMark('large')}
             </div>
 
             <div className="welcome-divider"></div>
 
             <div className="welcome-body">
-              <div className="wellness-badge">Wellness Assessment</div>
+              <div className="wellness-badge">{brandConfig.welcomeBadge || 'Wellness Assessment'}</div>
               <h1 className="main-title">
                 {brandConfig.welcomeTitle}<br />
                 {brandConfig.welcomeSubtitle}
@@ -1165,21 +1380,29 @@ function App() {
     }
 
     return (
-      <div className="app">
+      <div className={`app${appClassName}`}>
         <SoundToggleButton />
         <div className="container">
           <div className="welcome-screen">
             <div className="welcome-content">
               <div className={`logo-placeholder ${brandConfig.logoText.includes('알콜') ? 'kai-placeholder' : ''}`}>
                 <div>
-                  <img src={brandConfig.logoImage} alt={brandConfig.logoText} className="logo-image" />
+                  {brandConfig.logoImage ? (
+                    <img src={brandConfig.logoImage} alt={brandConfig.logoText} className="logo-image" />
+                  ) : (
+                    renderBrandMark('large')
+                  )}
                 </div>
               </div>
               <h1 className="welcome-title">{brandConfig.welcomeTitle}</h1>
               <h2 className="welcome-subtitle">{brandConfig.welcomeSubtitle}</h2>
               <p className="welcome-description">
-                몸과 마음의 상태에 맞는<br />
-                완벽한 에센셜 오일을 찾아드립니다
+                {brandConfig.welcomeDescription || (
+                  <>
+                    몸과 마음의 상태에 맞는<br />
+                    완벽한 에센셜 오일을 찾아드립니다
+                  </>
+                )}
               </p>
               <button className="btn btn-start" onClick={handleStart}>
                 시작하기
@@ -1200,7 +1423,7 @@ function App() {
     const ingredients = productIngredients[currentNode.result.name] || []
 
     return (
-      <div className="app app-result-page-1">
+      <div className={`app app-result-page-1${appClassName}`}>
         <SoundToggleButton />
         <div className="container">
           <div className="result-screen">
@@ -1305,7 +1528,7 @@ function App() {
     const isHumanbBrand = brandConfig.logoText.includes('HUMAN')
 
     return (
-      <div className="app">
+      <div className={`app${appClassName}`}>
         <SoundToggleButton />
         <div className="container">
           <div className="result-screen">
@@ -1406,7 +1629,7 @@ function App() {
 
               {/* 푸터 로고 */}
               <div className="result-footer-v2">
-                OD GRAPHY × HUMAN BALANCE
+                {brandConfig.resultFooterText || 'OD GRAPHY × HUMAN BALANCE'}
               </div>
             </div>
           </div>
@@ -1416,17 +1639,17 @@ function App() {
   }
 
   // 질문 페이지
-  const totalQuestions = 5
+  const totalQuestions = brandConfig.questionCount
   const isQuestion5 = currentNode.isQuestion5 === true
 
   return (
-    <div className="app">
+    <div className={`app${appClassName}`}>
       <SoundToggleButton />
       <div className="container">
         <div className="question-screen">
           <div className="question-header">
             <div className="logo-small">
-              <img src={brandConfig.logoSmallImage || brandConfig.logoImage} alt={brandConfig.logoText} className="logo-small-image" />
+              {renderBrandMark('small')}
             </div>
           </div>
 
@@ -1495,6 +1718,8 @@ function AromaTest() {
       <Route path="/dunamu/*" element={<App />} />
       <Route path="/odgraphy" element={<App />} />
       <Route path="/odgraphy/*" element={<App />} />
+      <Route path="/ananti" element={<App />} />
+      <Route path="/ananti/*" element={<App />} />
       <Route path="/humanb" element={<App />} />
       <Route path="/humanb/*" element={<App />} />
       <Route path="/alcohol" element={<App />} />

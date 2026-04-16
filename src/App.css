@@ -81,6 +81,49 @@ body {
   object-fit: contain;
 }
 
+.brand-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.brand-wordmark-large {
+  min-width: 240px;
+}
+
+.brand-wordmark-small {
+  min-width: 180px;
+}
+
+.brand-wordmark-main {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #2d2d2d;
+  line-height: 1;
+}
+
+.brand-wordmark-sub {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #6b6b6b;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.brand-wordmark-small .brand-wordmark-main {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+}
+
+.brand-wordmark-small .brand-wordmark-sub {
+  font-size: clamp(0.65rem, 1.8vw, 0.85rem);
+}
+
 /* 한국알콜 로고 전용 크기 조정 */
 .kai-placeholder {
   height: auto;
@@ -851,6 +894,181 @@ body.full-page-lock {
 .humanb-layout .sub-description {
   margin-top: 1rem;
   line-height: 1.8;
+}
+
+/* Ananti Aqua Theme */
+.app.ananti-theme {
+  --primary: #0f8ea3;
+  --primary-light: #24adc1;
+  --secondary: #7fdbe3;
+  --accent: #eefcff;
+  --background: #def8fb;
+  --surface: rgba(255, 255, 255, 0.86);
+  --text: #12343d;
+  --text-secondary: #4d6b74;
+  --border: #c6edf2;
+  --shadow: rgba(14, 109, 128, 0.12);
+  background:
+    radial-gradient(circle at top left, rgba(159, 240, 247, 0.7), transparent 34%),
+    radial-gradient(circle at right 15%, rgba(144, 207, 255, 0.35), transparent 28%),
+    linear-gradient(180deg, #f1fdff 0%, #ddf8fb 50%, #f7feff 100%);
+}
+
+.app.full-page-layout.ananti-theme {
+  background-image:
+    radial-gradient(circle at top left, rgba(159, 240, 247, 0.7), transparent 34%),
+    radial-gradient(circle at right 15%, rgba(144, 207, 255, 0.35), transparent 28%),
+    linear-gradient(180deg, #f1fdff 0%, #ddf8fb 50%, #f7feff 100%) !important;
+  background-size: cover;
+}
+
+.ananti-layout .full-page-welcome {
+  max-width: 560px;
+}
+
+.ananti-theme .full-page-welcome::before,
+.ananti-theme .full-page-welcome::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(4px);
+}
+
+.ananti-theme .full-page-welcome::before {
+  width: 320px;
+  height: 320px;
+  top: 10%;
+  right: -32%;
+  background: radial-gradient(circle, rgba(116, 220, 232, 0.34) 0%, rgba(116, 220, 232, 0) 72%);
+}
+
+.ananti-theme .full-page-welcome::after {
+  width: 280px;
+  height: 280px;
+  bottom: 6%;
+  left: -22%;
+  background: radial-gradient(circle, rgba(145, 202, 255, 0.28) 0%, rgba(145, 202, 255, 0) 70%);
+}
+
+.ananti-theme .welcome-header,
+.ananti-theme .welcome-body,
+.ananti-theme .welcome-footer,
+.ananti-theme .question-header,
+.ananti-theme .question-title,
+.ananti-theme .question-container,
+.ananti-theme .result-screen {
+  position: relative;
+  z-index: 1;
+}
+
+.ananti-theme .brand-wordmark-main {
+  color: #0f4451;
+}
+
+.ananti-theme .brand-wordmark-sub {
+  color: #448997;
+  letter-spacing: 0.12em;
+}
+
+.ananti-theme .welcome-divider {
+  width: 84px;
+  background: linear-gradient(90deg, rgba(15, 142, 163, 0), rgba(15, 142, 163, 0.88), rgba(15, 142, 163, 0));
+}
+
+.ananti-theme .wellness-badge,
+.ananti-theme .result-page-1-subtitle {
+  color: #1593a7;
+}
+
+.ananti-theme .main-title,
+.ananti-theme .question-title-text,
+.ananti-theme .question-text,
+.ananti-theme .result-page-1-title,
+.ananti-theme .usage-text-v2,
+.ananti-theme .result-description-box p,
+.ananti-theme .mini-box-content {
+  color: #12343d;
+}
+
+.ananti-theme .sub-description,
+.ananti-theme .result-footer-v2 {
+  color: #4d6b74;
+}
+
+.ananti-theme .progress-dot {
+  background: rgba(15, 142, 163, 0.14);
+}
+
+.ananti-theme .progress-dot.active {
+  background: linear-gradient(90deg, #0f8ea3 0%, #46cddb 100%);
+}
+
+.ananti-theme .question-number-badge,
+.ananti-theme .btn-start-round,
+.ananti-theme .btn-dark-v2 {
+  background: linear-gradient(135deg, #0f8ea3 0%, #39bfd2 100%);
+  box-shadow: 0 14px 32px rgba(15, 142, 163, 0.22);
+}
+
+.ananti-theme .btn-start-round:hover,
+.ananti-theme .btn-dark-v2:hover {
+  background: linear-gradient(135deg, #12879b 0%, #2eaec1 100%);
+}
+
+.ananti-theme .option-button,
+.ananti-theme .option-q5,
+.ananti-theme .result-page-1-content,
+.ananti-theme .result-description-box,
+.ananti-theme .body-image-box-v2,
+.ananti-theme .btn-outline-v2,
+.ananti-theme .sound-toggle-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(145, 222, 231, 0.88);
+  box-shadow: 0 18px 40px rgba(17, 111, 130, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.ananti-theme .option-button:hover,
+.ananti-theme .option-q5:hover,
+.ananti-theme .btn-outline-v2:hover {
+  border-color: #38bfd3;
+  box-shadow: 0 20px 44px rgba(17, 111, 130, 0.16);
+}
+
+.ananti-theme .option-button:hover .option-text,
+.ananti-theme .btn-back-simple:hover,
+.ananti-theme .click-hint,
+.ananti-theme .product-highlight {
+  color: #0f8ea3;
+}
+
+.ananti-theme .usage-badge-v2,
+.ananti-theme .mini-box-title {
+  background: rgba(175, 239, 245, 0.72);
+  color: #0f7588;
+}
+
+.ananti-theme .ingredient-mini-box:not(:last-child)::after {
+  background-color: #c6edf2;
+}
+
+.ananti-theme .result-page-1-content {
+  background: rgba(250, 255, 255, 0.74);
+}
+
+.ananti-theme .result-description-box,
+.ananti-theme .body-image-box-v2 {
+  border-color: rgba(145, 222, 231, 0.88);
+}
+
+.ananti-theme .btn-outline-v2 {
+  color: #0f7588;
+}
+
+.ananti-theme .sound-toggle-btn {
+  color: #0f7588;
 }
 
 /* 모든 화면 크기에서 로고 오버레이 보이도록 보장 */
