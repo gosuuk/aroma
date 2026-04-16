@@ -16,6 +16,7 @@ import humanbLogoStart from './assets/hum.svg'
 import humanbLogoSmall from './assets/hum1.svg'
 import humanbBgNone from './assets/hum3.png'
 import humanbLogoBg from './assets/hum2.svg'
+import anantiLogo from './assets/ananti.svg'
 
 // 오디오 파일
 import bgm1 from './assets/1.mp3'
@@ -1099,6 +1100,8 @@ function App() {
     } else if (pathname.startsWith('/ananti')) {
       return {
         logoText: 'ANANTI',
+        logoImage: anantiLogo,
+        logoSmallImage: anantiLogo,
         logoSubtext: '플로팅 이너밸런스 저니',
         welcomeTitle: '아난티 여행자들을 위한',
         welcomeSubtitle: '웰니스 아로마 테스트',
