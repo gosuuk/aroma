@@ -20,6 +20,7 @@ import anantiLogo from './assets/ananti.svg'
 
 // 오디오 파일
 import bgm1 from './assets/1.mp3'
+import bgm2 from './assets/2.mp3'
 
 // 제품 이미지
 import perfectShapingDetailImg from './assets/Group 101.png'
@@ -1119,7 +1120,7 @@ function App() {
           </>
         ),
         isFullPageWelcome: true,
-        bgm: bgm1,
+        bgm: bgm2,
         tree: anantiTree,
         questionCount: 4,
         appClassName: 'ananti-theme ananti-layout',
