@@ -897,13 +897,13 @@ const anantiTree: AromaNode = {
           id: 'ananti-body-swelling-q3',
           question: '오늘 가장 집중 관리하고 싶은\n포인트는 무엇인가요?',
           optionA: '라인 정리. 붓기를 빼고 가볍고 슬림한 느낌을 만들고 싶어요.',
-          optionB: '컨디션 회복. 맑아지고 개운한 상태를 만들고 싶어요.',
+          optionB: '컨디션 회복! 맑아지고 개운한 상태를 만들고 싶어요.',
           children: {
             A: {
               id: 'ananti-body-swelling-q4-a',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
-              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.',
               children: {
                 A: createResultNode('ananti-result-perfect-1', '퍼펙트 쉐이핑'),
                 B: createResultNode('ananti-result-breathe-1', '브리쓰 브리즈')
@@ -912,8 +912,8 @@ const anantiTree: AromaNode = {
             B: {
               id: 'ananti-body-swelling-q4-b',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
-              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.',
               children: {
                 A: createResultNode('ananti-result-perfect-2', '퍼펙트 쉐이핑'),
                 B: createResultNode('ananti-result-breathe-2', '브리쓰 브리즈')
@@ -925,13 +925,13 @@ const anantiTree: AromaNode = {
           id: 'ananti-body-heavy-q3',
           question: '오늘 가장 집중 관리하고 싶은\n포인트는 무엇인가요?',
           optionA: '라인 정리. 붓기를 빼고 가볍고 슬림한 느낌을 만들고 싶어요.',
-          optionB: '컨디션 회복. 맑아지고 개운한 상태를 만들고 싶어요.',
+          optionB: '컨디션 회복! 맑아지고 개운한 상태를 만들고 싶어요.',
           children: {
             A: {
               id: 'ananti-body-heavy-q4-a',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
-              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.',
               children: {
                 A: createResultNode('ananti-result-perfect-3', '퍼펙트 쉐이핑'),
                 B: createResultNode('ananti-result-breathe-3', '브리쓰 브리즈')
@@ -940,8 +940,8 @@ const anantiTree: AromaNode = {
             B: {
               id: 'ananti-body-heavy-q4-b',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.\n>> 퍼펙트 쉐이핑',
-              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.\n>> 브리쓰 브리즈',
+              optionA: '순환을 깨우고 따뜻하게 풀어 배출이 잘 되길 원해요.',
+              optionB: '호흡이 시원해지고 몸이 개운해지길 원해요.',
               children: {
                 A: createResultNode('ananti-result-perfect-4', '퍼펙트 쉐이핑'),
                 B: createResultNode('ananti-result-breathe-4', '브리쓰 브리즈')
@@ -966,8 +966,8 @@ const anantiTree: AromaNode = {
             A: {
               id: 'ananti-mind-drained-q4-a',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
-              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.',
               children: {
                 A: createResultNode('ananti-result-chill-1', '칠 바이브'),
                 B: createResultNode('ananti-result-rose-1', '로즈 엘릭서')
@@ -976,8 +976,8 @@ const anantiTree: AromaNode = {
             B: {
               id: 'ananti-mind-drained-q4-b',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
-              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.',
               children: {
                 A: createResultNode('ananti-result-chill-2', '칠 바이브'),
                 B: createResultNode('ananti-result-rose-2', '로즈 엘릭서')
@@ -994,8 +994,8 @@ const anantiTree: AromaNode = {
             A: {
               id: 'ananti-mind-sensitive-q4-a',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
-              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.',
               children: {
                 A: createResultNode('ananti-result-chill-3', '칠 바이브'),
                 B: createResultNode('ananti-result-rose-3', '로즈 엘릭서')
@@ -1004,8 +1004,8 @@ const anantiTree: AromaNode = {
             B: {
               id: 'ananti-mind-sensitive-q4-b',
               question: '아로마 오일이 어떤 도움을\n주면 좋겠나요?',
-              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.\n>> 칠 바이브',
-              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.\n>> 로즈 엘릭서',
+              optionA: '깊은 휴식감이 오래 남아 에너지가 충전되면 좋겠어요.',
+              optionB: '자신감과 회복을 주어 활력이 넘치면 좋겠어요.',
               children: {
                 A: createResultNode('ananti-result-chill-4', '칠 바이브'),
                 B: createResultNode('ananti-result-rose-4', '로즈 엘릭서')
