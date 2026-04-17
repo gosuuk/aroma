@@ -1026,6 +1026,7 @@ interface BrandConfig {
   welcomeTitle: string | React.ReactNode
   welcomeSubtitle: string | React.ReactNode
   questionTitle: string | React.ReactNode
+  startButtonText?: string
   bgm: any
   tree: AromaNode
   questionCount: number
@@ -1104,8 +1105,8 @@ function App() {
         logoImage: anantiLogo,
         logoSmallImage: anantiLogo,
         logoSubtext: '플로팅 이너밸런스 저니',
-        welcomeTitle: '아난티 여행자들을 위한',
-        welcomeSubtitle: '웰니스 아로마 테스트',
+        welcomeTitle: '아난티 여행자를 위한',
+        welcomeSubtitle: '웰니스 아로마 큐레이션',
         welcomeDescription: (
           <>
             당신의 몸과 마음의 균형을 맞추는<br />
@@ -1115,10 +1116,11 @@ function App() {
         welcomeBadge: 'Floating Inner Balance Journey',
         questionTitle: (
           <>
-            아난티 여행자들을 위한<br />
-            웰니스 아로마 테스트
+            아난티 여행자를 위한<br />
+            웰니스 아로마 큐레이션
           </>
         ),
+        startButtonText: '웰니스 큐레이션 시작하기',
         isFullPageWelcome: true,
         bgm: bgm2,
         tree: anantiTree,
@@ -1338,6 +1340,10 @@ function App() {
   const fullPageBackgroundStyle = brandConfig.backgroundImage
     ? { backgroundImage: `url(${brandConfig.backgroundImage})` }
     : undefined
+  const stepNumber = path.length + 1
+  const stepBadgeText = brandConfig.logoText === 'ANANTI'
+    ? `Step ${String(stepNumber).padStart(2, '0')}`
+    : `Question ${stepNumber}`
 
   if (showWelcome) {
     if (brandConfig.isFullPageWelcome) {
@@ -1375,7 +1381,7 @@ function App() {
 
             <div className="welcome-footer">
               <button className="btn-start-round" onClick={handleStart}>
-                테스트 시작하기
+                {brandConfig.startButtonText || '테스트 시작하기'}
               </button>
             </div>
           </div>
@@ -1667,7 +1673,7 @@ function App() {
                 />
               ))}
             </div>
-            <div className="question-number-badge">Question {path.length + 1}</div>
+            <div className="question-number-badge">{stepBadgeText}</div>
           </div>
 
           <div className={`question-container ${isQuestion5 ? 'question-5-style' : ''}`}>
