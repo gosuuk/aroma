@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400&family=Playfair+Display:ital,wght@1,400&display=swap');
 
 :root {
   --primary: #6d5649;
@@ -926,96 +926,6 @@ body.full-page-lock {
   max-width: 560px;
 }
 
-.ananti-logo-lockup {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: min(70vw, 500px);
-  gap: 0;
-  line-height: 0;
-}
-
-.ananti-logo-lockup-small {
-  width: min(70vw, 500px);
-  gap: 0;
-}
-
-.ananti-wordmark-crop {
-  display: block;
-  width: 100%;
-  aspect-ratio: 139.8 / 26;
-  overflow: hidden;
-  margin-bottom: clamp(1.6rem, 4vw, 2.35rem);
-}
-
-.ananti-wordmark-crop img {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
-}
-
-.ananti-lockup-cross {
-  position: relative;
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-bottom: clamp(0.45rem, 1.4vw, 0.85rem);
-}
-
-.ananti-lockup-cross::before,
-.ananti-lockup-cross::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30px;
-  height: 2px;
-  background: #221e1f;
-  transform-origin: center;
-}
-
-.ananti-lockup-cross::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.ananti-lockup-cross::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.ananti-humanbalance-lockup {
-  display: grid;
-  grid-template-columns: 16.2% 1fr;
-  align-items: center;
-  column-gap: 3.2%;
-  width: 100%;
-  color: #553e3d;
-  line-height: 1;
-}
-
-.ananti-humanbalance-symbol {
-  display: block;
-  aspect-ratio: 1;
-  overflow: hidden;
-}
-
-.ananti-humanbalance-symbol img {
-  display: block;
-  width: 579%;
-  max-width: none;
-  height: auto;
-}
-
-.ananti-humanbalance-text {
-  display: block;
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: clamp(1.95rem, 6.8vw, 3.05rem);
-  font-weight: 600;
-  letter-spacing: 0.045em;
-  white-space: nowrap;
-}
-
 .ananti-theme .brand-logo,
 .ananti-theme .logo-small-image {
   display: block;
@@ -1248,27 +1158,6 @@ body.full-page-lock {
   .brand-logo {
     width: 90vw;
     max-width: 450px;
-  }
-
-  .ananti-logo-lockup {
-    width: min(90vw, 450px);
-    gap: 0;
-  }
-
-  .ananti-logo-lockup-small {
-    width: min(90vw, 450px);
-    gap: 0;
-  }
-
-  .ananti-lockup-cross {
-    width: 20px;
-    height: 20px;
-  }
-
-  .ananti-lockup-cross::before,
-  .ananti-lockup-cross::after {
-    width: 25px;
-    height: 1.7px;
   }
 
   .wellness-badge {
