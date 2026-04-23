@@ -1174,6 +1174,23 @@ function App() {
   const renderBrandMark = (variant: 'large' | 'small') => {
     const logoSrc = variant === 'small' ? (brandConfig.logoSmallImage || brandConfig.logoImage) : brandConfig.logoImage
 
+    if (brandConfig.logoText === 'ANANTI' && logoSrc) {
+      return (
+        <div className={`ananti-logo-lockup ananti-logo-lockup-${variant}`}>
+          <span className="ananti-wordmark-crop" aria-hidden="true">
+            <img src={logoSrc} alt="" />
+          </span>
+          <span className="ananti-lockup-cross" aria-hidden="true" />
+          <div className="ananti-humanbalance-lockup" aria-label="HUMAN BALANCE">
+            <span className="ananti-humanbalance-symbol" aria-hidden="true">
+              <img src={humanbLogoStart} alt="" />
+            </span>
+            <span className="ananti-humanbalance-text">HUMANBALANCE</span>
+          </div>
+        </div>
+      )
+    }
+
     if (logoSrc) {
       return (
         <img
