@@ -1040,6 +1040,12 @@ interface BrandConfig {
   isFullPageWelcome?: boolean
   appClassName?: string
   resultFooterText?: string
+  metaTitle?: string
+  metaDescription?: string
+  metaKeywords?: string
+  metaUrl?: string
+  metaImage?: string
+  metaImageAlt?: string
 }
 
 function App() {
@@ -1056,6 +1062,32 @@ function App() {
   useEffect(() => {
     setCurrentNode(brandConfig.tree)
     setPath([])
+  }, [location.pathname])
+
+  useEffect(() => {
+    const metaTitle = brandConfig.metaTitle || '아난티 여행자를 위한 웰니스 아로마 큐레이션'
+    const metaDescription = brandConfig.metaDescription || '아난티 여행자를 위한 웰니스 아로마 큐레이션. 당신의 몸과 마음의 균형을 맞추는 플로팅 전용 이너밸런스 오일을 찾아드립니다.'
+    const metaKeywords = brandConfig.metaKeywords || '아난티, 웰니스, 아로마, 큐레이션, 플로팅, 이너밸런스, 아로마테라피'
+    const metaUrl = brandConfig.metaUrl || 'https://aroma-sage.vercel.app/ananti'
+    const metaImage = brandConfig.metaImage || 'https://aroma-sage.vercel.app/og-ananti-v2.png'
+    const metaImageAlt = brandConfig.metaImageAlt || '아난티 웰니스 아로마 큐레이션 로고'
+
+    const setMetaContent = (selector: string, content: string) => {
+      const element = document.head.querySelector<HTMLMetaElement>(selector)
+      if (element) element.content = content
+    }
+
+    document.title = metaTitle
+    setMetaContent('meta[name="description"]', metaDescription)
+    setMetaContent('meta[name="keywords"]', metaKeywords)
+    setMetaContent('meta[property="og:title"]', metaTitle)
+    setMetaContent('meta[property="og:description"]', metaDescription)
+    setMetaContent('meta[property="og:url"]', metaUrl)
+    setMetaContent('meta[property="og:image"]', metaImage)
+    setMetaContent('meta[property="og:image:alt"]', metaImageAlt)
+    setMetaContent('meta[name="twitter:title"]', metaTitle)
+    setMetaContent('meta[name="twitter:description"]', metaDescription)
+    setMetaContent('meta[name="twitter:image"]', metaImage)
   }, [location.pathname])
 
   // 경로에 따라 브랜드 설정
@@ -1135,7 +1167,7 @@ function App() {
         logoImage: ncLogo,
         logoSmallImage: ncLogo,
         logoSubtext: '웰니스 아로마 큐레이션',
-        welcomeTitle: 'NC 구성원을 위한',
+        welcomeTitle: 'NC 임직원을 위한',
         welcomeSubtitle: '웰니스 아로마 큐레이션',
         welcomeDescription: (
           <>
@@ -1146,7 +1178,7 @@ function App() {
         welcomeBadge: 'NC Wellness Aroma Journey',
         questionTitle: (
           <>
-            NC 구성원을 위한<br />
+            NC 임직원을 위한<br />
             웰니스 아로마 큐레이션
           </>
         ),
@@ -1156,7 +1188,12 @@ function App() {
         tree: anantiTree,
         questionCount: 4,
         appClassName: 'ananti-theme nc-theme ananti-layout nc-layout',
-        resultFooterText: 'NC WELLNESS AROMA JOURNEY'
+        resultFooterText: 'NC WELLNESS AROMA JOURNEY',
+        metaTitle: 'NC 임직원을 위한 웰니스 아로마 큐레이션',
+        metaDescription: 'NC 임직원을 위한 웰니스 아로마 큐레이션. 오늘의 몸과 마음 컨디션에 맞는 이너밸런스 아로마 오일을 찾아드립니다.',
+        metaKeywords: 'NC, 임직원, 웰니스, 아로마, 큐레이션, 이너밸런스, 아로마테라피',
+        metaUrl: 'https://aroma-sage.vercel.app/nc',
+        metaImageAlt: 'NC 웰니스 아로마 큐레이션 로고'
       }
     } else if (pathname.startsWith('/humanb')) {
       return {

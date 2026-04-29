@@ -20,6 +20,34 @@
     <meta name="twitter:description" content="당신의 몸과 마음의 균형을 맞추는 플로팅 전용 이너밸런스 오일을 찾아드립니다." />
     <meta name="twitter:image" content="https://aroma-sage.vercel.app/og-ananti-v2.png" />
     <title>아난티 여행자를 위한 웰니스 아로마 큐레이션</title>
+    <script>
+      (() => {
+        if (!window.location.pathname.startsWith('/nc')) return
+
+        const title = 'NC 임직원을 위한 웰니스 아로마 큐레이션'
+        const description = 'NC 임직원을 위한 웰니스 아로마 큐레이션. 오늘의 몸과 마음 컨디션에 맞는 이너밸런스 아로마 오일을 찾아드립니다.'
+        const keywords = 'NC, 임직원, 웰니스, 아로마, 큐레이션, 이너밸런스, 아로마테라피'
+        const url = 'https://aroma-sage.vercel.app/nc'
+        const image = 'https://aroma-sage.vercel.app/og-ananti-v2.png'
+
+        const setMetaContent = (selector, content) => {
+          const element = document.head.querySelector(selector)
+          if (element) element.setAttribute('content', content)
+        }
+
+        document.title = title
+        setMetaContent('meta[name="description"]', description)
+        setMetaContent('meta[name="keywords"]', keywords)
+        setMetaContent('meta[property="og:title"]', title)
+        setMetaContent('meta[property="og:description"]', description)
+        setMetaContent('meta[property="og:url"]', url)
+        setMetaContent('meta[property="og:image"]', image)
+        setMetaContent('meta[property="og:image:alt"]', 'NC 웰니스 아로마 큐레이션 로고')
+        setMetaContent('meta[name="twitter:title"]', title)
+        setMetaContent('meta[name="twitter:description"]', description)
+        setMetaContent('meta[name="twitter:image"]', image)
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
