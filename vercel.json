@@ -1,9 +1,16 @@
 {
   "rewrites": [
     {
+      "source": "/nc",
+      "destination": "/nc.html"
+    },
+    {
+      "source": "/nc/(.*)",
+      "destination": "/nc.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
 }
-
