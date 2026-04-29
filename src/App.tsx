@@ -17,6 +17,7 @@ import humanbLogoSmall from './assets/hum1.svg'
 import humanbBgNone from './assets/hum3.png'
 import humanbLogoBg from './assets/hum2.svg'
 import anantiLogo from './assets/ananti.png'
+import ncLogo from './assets/nc.png'
 
 // 오디오 파일
 import bgm1 from './assets/1.mp3'
@@ -1128,6 +1129,35 @@ function App() {
         appClassName: 'ananti-theme ananti-layout',
         resultFooterText: 'ANANTI FLOATING INNER BALANCE JOURNEY'
       }
+    } else if (pathname.startsWith('/nc')) {
+      return {
+        logoText: 'NC',
+        logoImage: ncLogo,
+        logoSmallImage: ncLogo,
+        logoSubtext: '웰니스 아로마 큐레이션',
+        welcomeTitle: 'NC 구성원을 위한',
+        welcomeSubtitle: '웰니스 아로마 큐레이션',
+        welcomeDescription: (
+          <>
+            오늘의 몸과 마음 컨디션에 맞는<br />
+            이너밸런스 아로마 오일을 찾아드립니다.
+          </>
+        ),
+        welcomeBadge: 'NC Wellness Aroma Journey',
+        questionTitle: (
+          <>
+            NC 구성원을 위한<br />
+            웰니스 아로마 큐레이션
+          </>
+        ),
+        startButtonText: '웰니스 큐레이션 시작하기',
+        isFullPageWelcome: true,
+        bgm: bgm2,
+        tree: anantiTree,
+        questionCount: 4,
+        appClassName: 'ananti-theme nc-theme ananti-layout nc-layout',
+        resultFooterText: 'NC WELLNESS AROMA JOURNEY'
+      }
     } else if (pathname.startsWith('/humanb')) {
       return {
         logoText: 'HUMAN BALANCE',
@@ -1341,7 +1371,7 @@ function App() {
     ? { backgroundImage: `url(${brandConfig.backgroundImage})` }
     : undefined
   const stepNumber = path.length + 1
-  const stepBadgeText = brandConfig.logoText === 'ANANTI'
+  const stepBadgeText = brandConfig.logoText === 'ANANTI' || brandConfig.logoText === 'NC'
     ? `Step ${String(stepNumber).padStart(2, '0')}`
     : `Question ${stepNumber}`
 
@@ -1730,6 +1760,8 @@ function AromaTest() {
       <Route path="/odgraphy/*" element={<App />} />
       <Route path="/ananti" element={<App />} />
       <Route path="/ananti/*" element={<App />} />
+      <Route path="/nc" element={<App />} />
+      <Route path="/nc/*" element={<App />} />
       <Route path="/humanb" element={<App />} />
       <Route path="/humanb/*" element={<App />} />
       <Route path="/alcohol" element={<App />} />

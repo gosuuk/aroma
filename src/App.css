@@ -715,6 +715,36 @@ body.full-page-lock {
   height: 100%;
 }
 
+/* 태블릿/가로 모드에서는 풀페이지 웰컴이 화면보다 커질 수 있어 스크롤 허용 */
+@media (orientation: landscape),
+  (min-width: 768px) and (max-width: 1366px) and (max-height: 1180px) {
+  body.full-page-lock {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    position: static !important;
+    height: auto !important;
+    min-height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .app.full-page-layout {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .full-page-welcome {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    height: auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
 .app.full-page-layout {
   min-height: 100vh;
   min-height: 100dvh;
@@ -2670,5 +2700,167 @@ body.full-page-lock {
     font-size: 1.08rem;
     font-weight: 700;
     margin-bottom: 2.9rem;
+  }
+}
+
+/* NC Blue Theme */
+.app.nc-theme {
+  --primary: #003569;
+  --primary-light: #005aa8;
+  --secondary: #5eb7dc;
+  --accent: #d2ac60;
+  --background: #eef7fb;
+  --surface: rgba(255, 255, 255, 0.88);
+  --text: #0b2545;
+  --text-secondary: #506b82;
+  --border: #b9d7ea;
+  --shadow: rgba(0, 53, 105, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.34) 46%, rgba(255, 248, 226, 0.72) 100%),
+    linear-gradient(135deg, #f7fbff 0%, #eaf5fb 50%, #fff5dc 100%);
+}
+
+.app.full-page-layout.nc-theme {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.34) 46%, rgba(255, 248, 226, 0.72) 100%),
+    linear-gradient(135deg, #f7fbff 0%, #eaf5fb 50%, #fff5dc 100%) !important;
+  background-size: cover;
+}
+
+.nc-layout .full-page-welcome {
+  max-width: 620px;
+}
+
+.nc-theme .full-page-welcome::before,
+.nc-theme .full-page-welcome::after {
+  display: none;
+}
+
+.nc-theme .brand-logo {
+  width: min(72vw, 560px);
+  max-width: 560px;
+  filter: drop-shadow(0 16px 28px rgba(0, 53, 105, 0.1));
+}
+
+.nc-theme .logo-small-image {
+  width: min(64vw, 520px);
+  max-width: 520px;
+}
+
+.nc-theme .brand-wordmark-main,
+.nc-theme .main-title,
+.nc-theme .question-title-text,
+.nc-theme .question-text,
+.nc-theme .result-page-1-title,
+.nc-theme .usage-text-v2,
+.nc-theme .result-description-box p,
+.nc-theme .mini-box-content {
+  color: #0b2545;
+}
+
+.nc-theme .brand-wordmark-sub,
+.nc-theme .sub-description,
+.nc-theme .result-footer-v2 {
+  color: #506b82;
+}
+
+.nc-theme .welcome-divider {
+  width: 104px;
+  background: linear-gradient(90deg, rgba(0, 53, 105, 0), #003569 45%, #d2ac60 100%);
+}
+
+.nc-theme .wellness-badge,
+.nc-theme .result-page-1-subtitle,
+.nc-theme .click-hint,
+.nc-theme .product-highlight,
+.nc-theme .option-button:hover .option-text,
+.nc-theme .btn-back-simple:hover {
+  color: #003569;
+}
+
+.nc-theme .progress-dot {
+  background: rgba(0, 53, 105, 0.14);
+}
+
+.nc-theme .progress-dot.active {
+  background: linear-gradient(90deg, #003569 0%, #5eb7dc 100%);
+}
+
+.nc-theme .question-number-badge,
+.nc-theme .btn-start-round,
+.nc-theme .btn-dark-v2 {
+  background: linear-gradient(135deg, #003569 0%, #005aa8 100%);
+  box-shadow: 0 14px 32px rgba(0, 53, 105, 0.22);
+}
+
+.nc-theme .btn-start-round:hover,
+.nc-theme .btn-dark-v2:hover {
+  background: linear-gradient(135deg, #002d59 0%, #004f95 100%);
+}
+
+.nc-theme .option-button,
+.nc-theme .option-q5,
+.nc-theme .result-page-1-content,
+.nc-theme .result-description-box,
+.nc-theme .body-image-box-v2,
+.nc-theme .btn-outline-v2,
+.nc-theme .sound-toggle-btn {
+  background: rgba(255, 255, 255, 0.84);
+  border-color: rgba(0, 83, 155, 0.24);
+  box-shadow: 0 18px 40px rgba(0, 53, 105, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.nc-theme .option-button:hover,
+.nc-theme .option-q5:hover,
+.nc-theme .btn-outline-v2:hover {
+  border-color: #005aa8;
+  box-shadow: 0 20px 44px rgba(0, 53, 105, 0.15);
+}
+
+.nc-theme .usage-badge-v2,
+.nc-theme .mini-box-title {
+  background: rgba(242, 209, 143, 0.38);
+  border: 1px solid rgba(0, 53, 105, 0.12);
+  color: #003569;
+}
+
+.nc-theme .ingredient-mini-box:not(:last-child)::after {
+  background-color: rgba(0, 53, 105, 0.18);
+}
+
+.nc-theme .result-page-1-content {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.nc-theme .result-page-1-tagline {
+  border-bottom-color: rgba(0, 53, 105, 0.28);
+}
+
+.nc-theme .btn-outline-v2,
+.nc-theme .sound-toggle-btn {
+  color: #003569;
+}
+
+@media (max-width: 640px) {
+  .nc-theme .brand-logo {
+    width: min(84vw, 420px);
+  }
+
+  .nc-theme .logo-small-image {
+    width: min(84vw, 420px);
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) and (min-height: 1600px) and (orientation: portrait) {
+  .nc-theme .brand-logo {
+    width: min(74vw, 720px);
+    max-width: 720px;
+  }
+
+  .nc-theme .logo-small-image {
+    width: min(72vw, 760px);
+    max-width: 760px;
   }
 }
