@@ -22,6 +22,7 @@ import ncLogo from './assets/nc.png'
 // 오디오 파일
 import bgm1 from './assets/1.mp3'
 import bgm2 from './assets/2.mp3'
+import ncBgm from './assets/nc2.mp3'
 
 // 제품 이미지
 import perfectShapingDetailImg from './assets/Group 101.png'
@@ -1184,7 +1185,7 @@ function App() {
         ),
         startButtonText: '웰니스 큐레이션 시작하기',
         isFullPageWelcome: true,
-        bgm: bgm2,
+        bgm: ncBgm,
         tree: anantiTree,
         questionCount: 4,
         appClassName: 'ananti-theme nc-theme ananti-layout nc-layout',

@@ -25,3 +25,7 @@ dist-ssr
 
 # Vercel
 .vercel
+
+# Remote server mirrors
+remote_www
+balancefitter_www
