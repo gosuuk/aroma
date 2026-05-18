@@ -1606,7 +1606,7 @@ function App() {
     const isHumanbBrand = brandConfig.logoText.includes('HUMAN')
 
     return (
-      <div className={`app${appClassName}`}>
+      <div className={`app app-result-page-2${appClassName}`}>
         <SoundToggleButton />
         <div className="container">
           <div className="result-screen">

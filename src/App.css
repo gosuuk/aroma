@@ -2864,3 +2864,158 @@ body.full-page-lock {
     max-width: 760px;
   }
 }
+
+/* NC 결과 화면: 갤럭시 탭 계열 세로 비율에서 화면을 가득 사용 */
+@media (min-width: 700px) and (max-width: 1100px) and (min-height: 900px) and (orientation: portrait) {
+  .app.app-result-page-1.nc-theme,
+  .app.app-result-page-2.nc-theme {
+    align-items: stretch;
+    justify-content: stretch;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 0;
+  }
+
+  .app.app-result-page-1.nc-theme .container,
+  .app.app-result-page-2.nc-theme .container {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .app.app-result-page-1.nc-theme .result-screen,
+  .app.app-result-page-2.nc-theme .result-screen {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .app.app-result-page-1.nc-theme .result-page-1-content,
+  .app.app-result-page-2.nc-theme .result-page-2-content {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    border-radius: 0;
+  }
+
+  .app.app-result-page-1.nc-theme .result-page-1-content {
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: none;
+    justify-content: center;
+    gap: clamp(1.1rem, 2vh, 1.8rem);
+    padding: clamp(2.4rem, 4.5vh, 3.8rem) clamp(2rem, 7vw, 5.5rem);
+  }
+
+  .app.app-result-page-1.nc-theme .result-page-1-header {
+    margin: 0;
+  }
+
+  .app.app-result-page-1.nc-theme .result-page-1-subtitle {
+    font-size: clamp(1.32rem, 2.65vw, 1.72rem);
+    margin-bottom: 0.35rem;
+  }
+
+  .app.app-result-page-1.nc-theme .result-page-1-title {
+    font-size: clamp(2.75rem, 5.6vw, 3.8rem);
+    line-height: 1.08;
+    margin-bottom: 1rem;
+  }
+
+  .app.app-result-page-1.nc-theme .result-page-1-tagline {
+    font-size: clamp(1.25rem, 2.5vw, 1.62rem);
+    padding-bottom: 0.55rem;
+  }
+
+  .app.app-result-page-1.nc-theme .product-composition-container {
+    width: min(78vw, 620px);
+    max-width: none;
+    margin: 0;
+  }
+
+  .app.app-result-page-1.nc-theme .click-hint {
+    font-size: 1.1rem;
+    margin: 0.6rem 0 0;
+  }
+
+  .app.app-result-page-1.nc-theme .ingredient-horizontal-boxes {
+    width: 100%;
+    max-width: 980px;
+    gap: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .app.app-result-page-1.nc-theme .ingredient-mini-box {
+    padding: 0.45rem 0.5rem;
+  }
+
+  .app.app-result-page-1.nc-theme .mini-box-title {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .app.app-result-page-1.nc-theme .mini-box-content {
+    font-size: 1.04rem;
+    line-height: 1.5;
+  }
+
+  .app.app-result-page-1.nc-theme .result-description-box {
+    width: 100%;
+    max-width: 980px;
+    padding: 1.5rem 2.4rem;
+    margin-bottom: 0;
+  }
+
+  .app.app-result-page-1.nc-theme .result-description-box p {
+    font-size: 1.26rem;
+    line-height: 1.72;
+  }
+
+  .app.app-result-page-2.nc-theme .result-page-2-content {
+    justify-content: center;
+    gap: clamp(1.4rem, 2.6vh, 2.4rem);
+    padding: clamp(2.8rem, 5vh, 4.5rem) clamp(2.4rem, 8vw, 6rem);
+  }
+
+  .app.app-result-page-2.nc-theme .usage-badge-v2 {
+    font-size: 1.15rem;
+    padding: 0.5rem 1.7rem;
+  }
+
+  .app.app-result-page-2.nc-theme .usage-text-v2 {
+    font-size: 1.35rem;
+    line-height: 1.7;
+  }
+
+  .app.app-result-page-2.nc-theme .body-image-box-v2 {
+    width: min(78vw, 640px);
+    max-width: none;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .app.app-result-page-2.nc-theme .body-image-v2 {
+    max-height: 42vh;
+  }
+
+  .app.app-result-page-2.nc-theme .result-buttons-v2 {
+    max-width: 480px;
+    gap: 0.9rem;
+    margin-top: 0;
+  }
+
+  .app.app-result-page-2.nc-theme .btn-outline-v2,
+  .app.app-result-page-2.nc-theme .btn-dark-v2 {
+    font-size: 1.2rem;
+    padding: 1.15rem;
+  }
+
+  .app.app-result-page-2.nc-theme .result-footer-v2 {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+}
