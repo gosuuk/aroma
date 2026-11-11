@@ -12,6 +12,9 @@ import odgraphyLogoBottom from './assets/odgraphy2.svg'
 import odgraphyLogoSmall from './assets/odgraphy3.svg'
 import odgraphyBg from './assets/odgrapy4.png'
 
+import thinkMoveSymbol from './assets/@@Think&Move-심볼.png'
+import thinkMoveWordmark from './assets/최종로고_B.png'
+
 import humanbLogoStart from './assets/hum.svg'
 import humanbLogoSmall from './assets/hum1.svg'
 import humanbBgNone from './assets/hum3.png'
@@ -1024,6 +1027,7 @@ const anantiTree: AromaNode = {
 interface BrandConfig {
   logoText: string
   logoImage?: string
+  logoSymbolImage?: string
   logoSubtext?: string
   welcomeTitle: string | React.ReactNode
   welcomeSubtitle: string | React.ReactNode
@@ -1133,6 +1137,40 @@ function App() {
         questionCount: 5,
         resultFooterText: 'OD GRAPHY × HUMAN BALANCE'
       }
+    } else if (pathname.startsWith('/thinkmove')) {
+      return {
+        logoText: 'THINK & MOVE',
+        logoImage: thinkMoveWordmark,
+        logoSymbolImage: thinkMoveSymbol,
+        welcomeTitle: '오늘의 컨디션에 맞는',
+        welcomeSubtitle: '아로마를 추천해드립니다',
+        welcomeDescription: (
+          <>
+            간단한 질문으로 몸과 마음의 상태를 점검하고,<br />
+            에센셜 오일과 사용 방법을 안내합니다.
+          </>
+        ),
+        questionTitle: (
+          <>
+            오늘의 컨디션에 맞는<br />
+            아로마를 추천해드립니다
+          </>
+        ),
+        logoSmallImage: thinkMoveWordmark,
+        logoBottomImage: thinkMoveWordmark,
+        backgroundImage: odgraphyBg,
+        isFullPageWelcome: true,
+        bgm: bgm1,
+        tree: aromaTree,
+        questionCount: 5,
+        appClassName: 'thinkmove-theme',
+        resultFooterText: 'THINK & MOVE × HUMAN BALANCE',
+        metaTitle: 'Think & Move 웰니스 아로마 테스트',
+        metaDescription: '오늘의 몸과 마음 컨디션에 맞는 아로마를 추천해드립니다.',
+        metaKeywords: 'Think & Move, 띵크앤무브, 웰니스, 아로마, 테스트, 아로마테라피',
+        metaUrl: 'https://aroma-sage.vercel.app/thinkmove',
+        metaImageAlt: 'Think & Move 웰니스 아로마 테스트 로고'
+      }
     } else if (pathname.startsWith('/ananti')) {
       return {
         logoText: 'ANANTI',
@@ -1241,6 +1279,24 @@ function App() {
 
   const renderBrandMark = (variant: 'large' | 'small') => {
     const logoSrc = variant === 'small' ? (brandConfig.logoSmallImage || brandConfig.logoImage) : brandConfig.logoImage
+
+    if (brandConfig.logoSymbolImage && logoSrc) {
+      return (
+        <div className={`brand-logo-composite brand-logo-composite-${variant}`}>
+          <img
+            src={brandConfig.logoSymbolImage}
+            alt=""
+            aria-hidden="true"
+            className="brand-logo-symbol"
+          />
+          <img
+            src={logoSrc}
+            alt={brandConfig.logoText}
+            className="brand-logo-wordmark"
+          />
+        </div>
+      )
+    }
 
     if (logoSrc) {
       return (
@@ -1796,6 +1852,8 @@ function AromaTest() {
       <Route path="/dunamu/*" element={<App />} />
       <Route path="/odgraphy" element={<App />} />
       <Route path="/odgraphy/*" element={<App />} />
+      <Route path="/thinkmove" element={<App />} />
+      <Route path="/thinkmove/*" element={<App />} />
       <Route path="/ananti" element={<App />} />
       <Route path="/ananti/*" element={<App />} />
       <Route path="/nc" element={<App />} />
